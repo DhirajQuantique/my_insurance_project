@@ -1,7 +1,6 @@
 import { Component, Input, OnInit, ViewChild } from '@angular/core';
 import {Color} from 'ng2-charts/ng2-charts';
 import { faTh, faCheck, faTrash, faAngleDown, faAngleUp } from '@fortawesome/free-solid-svg-icons';
-
 @Component({
   selector: 'app-analytics',
   templateUrl: './analytics.component.html',
