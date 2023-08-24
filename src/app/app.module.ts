@@ -33,7 +33,6 @@ import {PageTitleComponent} from './Layout/Components/page-title/page-title.comp
 import {HeaderComponent} from './Layout/Components/header/header.component';
 import {SearchBoxComponent} from './Layout/Components/header/elements/search-box/search-box.component';
 import {UserBoxComponent} from './Layout/Components/header/elements/user-box/user-box.component';
-
 // SIDEBAR
 
 import {SidebarComponent} from './Layout/Components/sidebar/sidebar.component';
@@ -48,7 +47,7 @@ import {FooterComponent} from './Layout/Components/footer/footer.component';
 // Dashboards
 
 import {AnalyticsComponent} from './DemoPages/Dashboards/analytics/analytics.component';
-
+import { ManagePlansComponent } from './DemoPages/Dashboards/ManagePlans/manageplan/manageplan.component';
 // Pages
 
 import {ForgotPasswordBoxedComponent} from './DemoPages/UserPages/forgot-password-boxed/forgot-password-boxed.component';
@@ -103,6 +102,7 @@ import {BubbleChartComponent} from './DemoPages/Charts/chartjs/examples/bubble-c
 import {DynamicChartComponent} from './DemoPages/Charts/chartjs/examples/dynamic-chart/dynamic-chart.component';
 import {DoughnutChartComponent} from './DemoPages/Charts/chartjs/examples/doughnut-chart/doughnut-chart.component';
 import {PieChartComponent} from './DemoPages/Charts/chartjs/examples/pie-chart/pie-chart.component';
+import { MainMenuComponent } from './Layout/Components/header/elements/main-menu/main-menu';
 
 const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
   suppressScrollX: true
@@ -123,6 +123,7 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
     HeaderComponent,
     SearchBoxComponent,
     UserBoxComponent,
+    MainMenuComponent,
 
     // SIDEBAR
 
@@ -138,7 +139,7 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
     // Dashboards
 
     AnalyticsComponent,
-
+    ManagePlansComponent,
     // User Pages
 
     ForgotPasswordBoxedComponent,
