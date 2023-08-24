@@ -1,7 +1,7 @@
 // Content Boxes
 
 // Variables
-
+@import '../../../assets/components/bootstrap5/variables';
 $widget-spacer: $spacer;
 
 .widget-content {
@@ -25,6 +25,16 @@ $widget-spacer: $spacer;
 
     .widget-subheading {
       opacity: .5;
+    }
+    .admin-detail{
+      display: $d-flex;
+      .admin-detail-name{
+        display: $d-flex;
+        flex-flow: column;
+        justify-content: center;
+        align-items: baseline;
+        padding-right: ($spacer * 0.7);
+      }
     }
   }
 

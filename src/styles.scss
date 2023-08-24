@@ -11,6 +11,11 @@
         justify-content: space-between;
     }
 }
+app-base-layout{
+    .card{
+        border: 0px !important;
+    }
+}
 .header_custome{
     display: flex;
     justify-content: space-between;
