@@ -35,6 +35,8 @@
       .header-main-menu{
         display: flex;
         gap:$gap-20;
+        margin: 0;
+        padding: 0px 20px;
         .meain-menu-dash{
           display: flex;
         }
