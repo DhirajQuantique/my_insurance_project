@@ -8,7 +8,7 @@ import {PagesLayoutComponent} from './Layout/pages-layout/pages-layout.component
 // Dashboards
 
 import {AnalyticsComponent} from './DemoPages/Dashboards/analytics/analytics.component';
-import { ManagePlansComponent } from './DemoPages/Dashboards/ManagePlans/manageplan/manageplan.component';
+import { ManagePlansComponent } from './DemoPages/Dashboards/ManagePlans/manageplan.component';
 
 // Pages
 
@@ -51,6 +51,8 @@ import {LayoutComponent} from './DemoPages/Forms/Elements/layout/layout.componen
 // Charts
 
 import {ChartjsComponent} from './DemoPages/Charts/chartjs/chartjs.component';
+import { Aboutus } from './DemoPages/Dashboards/Aboutus/aboutus.component';
+import { ServicesPage } from './DemoPages/Dashboards/Services/services.component';
 
 const routes: Routes = [
   {
@@ -62,6 +64,8 @@ const routes: Routes = [
 
       {path: '', component: AnalyticsComponent, data: {extraParameter: 'dashboardsMenu'}},
       {path: 'manageplan',component:ManagePlansComponent},
+      {path: 'aboutus',component:Aboutus},
+      {path: 'services',component:ServicesPage},
       // Elements
 
       {path: 'elements/buttons-standard', component: StandardComponent, data: {extraParameter: 'elementsMenu'}},

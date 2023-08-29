@@ -61,18 +61,24 @@
       visibility: hidden;
       opacity: 0;
       box-shadow: $box-shadow-default;
-      position: absolute;
-      left: 5%;
-      width: 90%;
+      position: fixed;
+      left: 0%;
+      width: 50%;
       top: 0;
       transition: all .2s;
       background: $white;
-      @include border-radius(50px);
+      @include border-radius(0px);
       padding: 0 10px !important;
-      overflow: hidden;
-
+      overflow: visible;
+      height: 100%;
       .app-header-left {
         padding-left: 0;
+        display: flex;
+        flex-flow: column;
+        width: 100%;
+        app-manimenu{
+          padding: 20px 0px;
+        }
       }
 
       .app-header-right {
@@ -97,7 +103,7 @@
           display: none;
         }
       }
-
+      
     }
 
     .app-header__menu {
@@ -111,7 +117,13 @@
     .app-header__content {
       visibility: visible;
       opacity: 1;
-      top: $app-header-height + 20;
+      top: $app-header-height;
+      align-items: normal;
+      flex-flow: column;
+      justify-content: normal;
+      height: calc(100% - 50px);
+      padding: 20px 10px !important;
+      justify-content: space-between;
     }
   }
 
@@ -333,6 +345,7 @@
       .card-header-title {
         display: inline-flex !important;
         line-height: 1;
+        text-align: left;
       }
 
       & > .nav {

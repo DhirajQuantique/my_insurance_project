@@ -46,7 +46,7 @@ import {FooterComponent} from './Layout/Components/footer/footer.component';
 // Dashboards
 
 import {AnalyticsComponent} from './DemoPages/Dashboards/analytics/analytics.component';
-import { ManagePlansComponent } from './DemoPages/Dashboards/ManagePlans/manageplan/manageplan.component';
+import { ManagePlansComponent } from './DemoPages/Dashboards/ManagePlans/manageplan.component';
 // Pages
 
 import {ForgotPasswordBoxedComponent} from './DemoPages/UserPages/forgot-password-boxed/forgot-password-boxed.component';

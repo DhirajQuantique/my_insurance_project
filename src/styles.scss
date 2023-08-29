@@ -117,22 +117,101 @@ app-base-layout{
             }
         }
     }
+    @media only screen and (min-width: 320px) and (max-width: 800px)  {
+        margin: 0px !important;
+        width: 100%;
+    }
+}
+.analytics_icon{
+    background-repeat: no-repeat;
+    background-image: $analytics-overview-icon;
+    background-size: contain;
+    display: flex;
+    width: 24px;
+    height: 24px;
+}
+.data_analytics_icon{
+    background-repeat: no-repeat;
+    background-image: $data-analysis-icon;
+    background-size: contain;
+    display: flex;
+    width: 24px;
+    height: 24px;
+}
+.activities-icon{
+    background-repeat: no-repeat;
+    background-image: $activities-icon;
+    background-size: contain;
+    display: flex;
+    width: 20px;
+    height: 24px;
+}
+.quantique-logo-footer{
+    background-repeat: no-repeat;
+    background-image: $qiantiqie-logo;
+    background-size: 100%;
+    display: flex;
+    width: 222px;
+    height: 59px;
+    background-position: center;
+}
+.facebook-icon{
+    background-repeat: no-repeat;
+    background-image:$facebook-icon;
+    background-size: 100%;
+    display: flex;
+    width: 20px;
+    height: 20px;
+    background-position: center;
+}
+.youtube-icon{
+    background-repeat: no-repeat;
+    background-image: $youtube-icon;
+    background-size: 100%;
+    display: flex;
+    width: 20px;
+    height: 20px;
+    background-position: center;
+}
+.insta-icon{
+    background-repeat: no-repeat;
+    background-image:$insta-icon;
+    background-size: 100%;
+    display: flex;
+    width: 20px;
+    height: 20px;
+    background-position: center;
+}
+.email-icon{
+    background-repeat: no-repeat;
+    background-image: $email-icon;
+    background-size: 100%;
+    display: flex;
+    width: 20px;
+    height: 20px;
+    background-position: center;
 }
 .table-chart-responsive{
     align-items: center;
     justify-content: space-between;
+    overflow: hidden;
     .dashboard-chart-section{
         width: 100%;
         display: flex;
         flex-flow: column;
         .dashboard-chart-block{
             width: 100%;
-            display: flex;
+            display: flex !important;
             .table-chart-main{
-                width: 100%;
                 display: flex;
             }
+            @media only screen and (min-width: 320px) and (max-width: 800px)  {
+                flex-flow: column !important;
+            }
         }
+    }
+    @media only screen and (min-width: 320px) and (max-width: 800px)  {
+        flex-flow: column !important;
     }
 }
 .tab-pane{
@@ -160,6 +239,7 @@ app-base-layout{
                     border-radius: 5px;
                     display: flex;
                     align-items: center;
+                    height: 100%;
                     select{
                         background-color: transparent;
                         border: 0;
@@ -168,12 +248,18 @@ app-base-layout{
                 }
             }
         }
+        @media only screen and (min-width: 320px) and (max-width: 900px)  {
+            flex-flow: column !important;
+        }
+        @media only screen and (min-width: 601px) and (max-width: 900px)  {
+            flex-flow: column !important;
+        }
     }
     .dashboard-main-page-table{
         width: 100%;
         .dashboard-main-table{
             border-radius: 8px;
-            overflow: hidden;
+            overflow:auto;
             background-color: rgba(0, 0, 0, 0.05) !important;
             table.table.table-striped{
                 th {
@@ -215,6 +301,7 @@ app-base-layout{
 }
 .overview-tab-true,.account-tab-true,.setting-tab-true{
     display: flex;
+    border-bottom: 4px solid $tab-active;
 }
 .m-0{
     margin: 0 !important;
@@ -270,6 +357,60 @@ app-base-layout{
 .mb-15{
     margin-bottom: 20px !important;
 }
+.p-0{
+    padding: 0 !important;
+}
+.pl-5{
+    padding-left: 5px !important;
+}
+.pr-5{
+    padding-right: 5px !important;
+}
+.pt-5{
+    padding-top: 5px !important;
+}
+.pb-5{
+    padding-bottom: 5px !important;
+}
+
+.pl-10{
+    padding-left: 10px !important;
+}
+.pr-10{
+    padding-right: 10px !important;
+}
+.pt-10{
+    padding-top: 10px !important;
+}
+.pb-10{
+    padding-bottom: 10px !important;
+}
+
+.pl-15{
+    padding-left: 15px !important;
+}
+.pr-15{
+    padding-right: 15px !important;
+}
+.pt-15{
+    padding-top: 15px !important;
+}
+.pb-15{
+    padding-bottom: 15px !important;
+}
+
+.pl-20{
+    padding-left: 20px !important;
+}
+.pr-15{
+    padding-right: 20px !important;
+}
+.pt-15{
+    padding-top: 20px !important;
+}
+.pb-15{
+    padding-bottom: 20px !important;
+}
 .gap-0{
     gap: 0 !important;
 }
@@ -294,9 +435,23 @@ app-base-layout{
 .align-item-center{
     align-items: center;
 }
+.align-items-baseline{
+    align-items: baseline;
+}
 .justify-content-center{
     justify-content: center;
 }
 .flex-flow-column{
     flex-flow: column;
+}
+.justify-content-space-center{
+    justify-content:center;
+}
+.justify-content-space-between{
+    justify-content: space-between;
+}
+app-regular{
+    @media only screen and (min-width: 320px) and (max-width: 900px)  {
+        overflow: hidden !important;
+    } 
 }

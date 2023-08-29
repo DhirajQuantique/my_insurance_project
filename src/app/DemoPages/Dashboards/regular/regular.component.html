@@ -1,15 +1,18 @@
 <div class="mb-3 card dashboard-main-page">
   <div class="dashboard-main-page-table">
     <div class="card-header-tab card-header d-flex p-0">
-      <div class="card-header-title font-size-lg text-capitalize fw-normal d-flex">
-        <span class="building-icon-dashboard">
-        </span>
+      <div
+        class="card-header-title font-size-lg text-capitalize fw-normal d-flex"
+      >
+        <span class="building-icon-dashboard"> </span>
         Business Partner Report
       </div>
-      <div class="dashboard-filter-section d-flex">
+      <div class="dashboard-filter-section d-flex align-item-center">
         <span>
-          <div class="d-flex justify-content-between p-2 pagination-dropdown-filter">
-            Show from {{page}} - {{pageSize}}
+          <div
+            class="d-flex justify-content-between p-2 pagination-dropdown-filter"
+          >
+            Show from {{ page }} - {{ pageSize }}
             <!-- <ngb-pagination
               [collectionSize]="collectionSize"
               [(page)]="page"
@@ -26,14 +29,26 @@
             [(ngModel)]="pageSize"
             (ngModelChange)="refreshPagination()"
           >
-          <option *ngFor="let item of this.dataList;let i = index" [ngValue]="item.code" [selected]="i == 0">{{item.pagination}}</option>
+            <option
+              *ngFor="let item of this.dataList; let i = index"
+              [ngValue]="item.code"
+              [selected]="i == 0"
+            >
+              {{ item.pagination }}
+            </option>
             <!-- <option [ngValue]="10">1</option>
             <option [ngValue]="20">2</option>
             <option [ngValue]="30">3</option> -->
           </select>
         </div>
         <div ngbDropdown class="d-inline-block more-button-option">
-          <button class="btn btn-outline-primary border-0 p-0" id="dropdownBasic1" ngbDropdownToggle><i class="bi bi-three-dots-vertical"></i></button>
+          <button
+            class="btn btn-outline-primary border-0 p-0"
+            id="dropdownBasic1"
+            ngbDropdownToggle
+          >
+            <i class="bi bi-three-dots-vertical"></i>
+          </button>
           <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
             <button class="dropdown-item">Action - 1</button>
             <button class="dropdown-item">Another Action</button>
@@ -42,7 +57,7 @@
         </div>
       </div>
     </div>
-   
+
     <div class="card main-card mb-3 dashboard-main-table">
       <table class="table table-striped">
         <thead>
@@ -157,9 +172,17 @@
   </div>
   <div class="benifit-total">
     <div class="benifit-total-title">
-      <div class="benefit total-main"><span class="benifit-total-icon"></span><span>Benefit total</span></div>
+      <div class="benefit total-main">
+        <span class="benifit-total-icon"></span><span>Benefit total</span>
+      </div>
       <div ngbDropdown class="d-inline-block more-button-option">
-        <button class="btn btn-outline-primary border-0 p-0" id="dropdownBasic1" ngbDropdownToggle><i class="bi bi-three-dots-vertical"></i></button>
+        <button
+          class="btn btn-outline-primary border-0 p-0"
+          id="dropdownBasic1"
+          ngbDropdownToggle
+        >
+          <i class="bi bi-three-dots-vertical"></i>
+        </button>
         <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
           <button class="dropdown-item">Action - 1</button>
           <button class="dropdown-item">Another Action</button>
@@ -194,44 +217,78 @@
   </div>
 </div>
 <div class="main-card mb-3 card">
-    <div class="card-header">
+  <div class="card-header p-0">
     <div class="table-responsive table-chart-responsive d-flex gap-20">
       <div class="dashboard-chart-section">
-        <div class="dashboard-chart-block d-flex gap-20">
-          <div class="table-chart-main  flex-flow-column">
-            <div class="card-header-title font-size-lg text-capitalize fw-normal">Company Agents Status</div>
-            <div class="d-block w-100">
-              <canvas baseChart [datasets]="barChartData" [labels]="barChartLabels" [options]="barChartOptions"
-                      [legend]="barChartLegend" [chartType]="barChartType" (chartHover)="chartHovered($event)"
-                      (chartClick)="chartClicked($event)"></canvas>
+        <div class="dashboard-chart-block col-md-12 d-flex gap-20">
+          <div class="table-chart-main flex-flow-column col-md-5">
+            <div
+              class="card-header-title font-size-lg text-capitalize fw-normal d-flex gap-10"
+            >
+              <span class="analytics_icon"></span><b>Analytics Overview</b>
             </div>
-          </div><!-- chart one -->
-          <div class="table-chart-main  flex-flow-column">
-            <div class="card-header-title font-size-lg text-capitalize fw-normal">Company Agents Status</div>
+            <div class="d-block w-100">
+              <canvas
+                baseChart
+                [datasets]="barChartData"
+                [labels]="barChartLabels"
+                [options]="barChartOptions"
+                [legend]="barChartLegend"
+                [chartType]="barChartType"
+                (chartHover)="chartHovered($event)"
+                (chartClick)="chartClicked($event)"
+              ></canvas>
+            </div>
+          </div>
+          <!-- chart one -->
+          <div class="table-chart-main flex-flow-column col-md-5">
+            <div
+              class="card-header-title font-size-lg text-capitalize fw-normal d-flex gap-10"
+            >
+              <span class="data_analytics_icon"></span><b>Data Analysis</b>
+            </div>
             <div class="w-100">
               <div>
                 <div style="display: block">
-                  <canvas baseChart
+                  <canvas
+                    baseChart
                     [data]="polarAreaChartData"
                     [labels]="polarAreaChartLabels"
                     [legend]="polarAreaLegend"
-                    [chartType]="polarAreaChartType">
+                    [chartType]="polarAreaChartType"
+                  >
                   </canvas>
                 </div>
               </div>
             </div>
-            
-          </div><!-- chart two -->
+          </div>
+          <!-- chart two -->
         </div>
         <div class="text-center">
-          <button mat-button mat-raised-button color="primary" (click)="randomize()">Update</button>
+          <button
+            mat-button
+            mat-raised-button
+            color="primary"
+            (click)="randomize()"
+          >
+            Update
+          </button>
         </div>
       </div>
       <div class="benifit-total">
         <div class="benifit-total-title">
-          <div class="benefit total-main"><span class="benifit-total-icon"></span><span>Benefit total</span></div>
+          <div class="benefit total-main gap-10">
+            <span class="activities-icon"></span>
+            <span>Activities</span>
+          </div>
           <div ngbDropdown class="d-inline-block more-button-option">
-            <button class="btn btn-outline-primary border-0 p-0" id="dropdownBasic1" ngbDropdownToggle><i class="bi bi-three-dots-vertical"></i></button>
+            <button
+              class="btn btn-outline-primary border-0 p-0"
+              id="dropdownBasic1"
+              ngbDropdownToggle
+            >
+              <i class="bi bi-three-dots-vertical"></i>
+            </button>
             <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
               <button class="dropdown-item">Action - 1</button>
               <button class="dropdown-item">Another Action</button>
@@ -264,10 +321,10 @@
           </div>
         </div>
       </div>
+    </div>
   </div>
-</div>
 
-<!-- 
+  <!-- 
 <div class="main-card mb-3 card">
   <div class="card-header">
     Active Users
@@ -888,3 +945,4 @@
     </div>
   </div>
 </div> -->
+</div>
