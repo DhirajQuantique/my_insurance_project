@@ -1,6 +1,6 @@
 import { Component, Input, OnInit, ViewChild } from '@angular/core';
 import {Color} from 'ng2-charts/ng2-charts';
-import { faTh, faCheck, faTrash, faAngleDown, faAngleUp } from '@fortawesome/free-solid-svg-icons';
+import { faTh, faCheck, faTrash, faAngleDown, faAngleUp, faPlus, faStar } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-analytics',
@@ -14,7 +14,23 @@ export class AnalyticsComponent implements OnInit {
   faAngleDown = faAngleDown;
   faAngleUp = faAngleUp;
 
+  overview:boolean = true;
+  accounts:boolean = false;
+  setting:boolean = false;
+  overviewcontainer:boolean = false;
+  accountscontainer:boolean=false;
+  settingcontainer:boolean=false;
+
+
+  faStar = faStar;
+  faPlus = faPlus;
+  status: string|boolean;
   
+  // @Input() heading;
+  // @Input() subheading;
+  // @Input() icon;
+  // message: string;
+
   heading = 'Analytics Dashboard';
   subheading = 'This is an example dashboard created using build-in elements and components.';
   icon = 'pe-7s-plane icon-gradient bg-tempting-azure';
@@ -161,6 +177,36 @@ export class AnalyticsComponent implements OnInit {
   };
 
   ngOnInit() {
+    setTimeout(() => {
+      this.overview = true;
+      this.overviewcontainer = true;
+      }, 200);
   }
-
+  
+  onclick(event)
+  {
+    if(event == 'overview'){
+      this.accounts = false;
+      this.overview = true;
+      this.setting = false;
+      this.overviewcontainer = true;
+      this.accountscontainer = false;
+      this.settingcontainer = false;
+    }else if(event == 'account'){
+      this.accounts = true;
+      this.overview = false;
+      this.setting = false;
+      this.accountscontainer = true;
+      this.overviewcontainer = false;
+      this.settingcontainer = false;
+    }else if(event == 'setting'){
+      this.setting = true;
+      this.overview= false;
+      this.accounts=false;
+      this.settingcontainer = true;
+      this.overviewcontainer = false;
+      this.accountscontainer = false;
+    }
+    
+  }
 }

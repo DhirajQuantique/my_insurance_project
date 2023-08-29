@@ -1,5 +1,6 @@
 @import "assets/base";
 @import '../src/assets/components/bootstrap5/variables';
+@import "~bootstrap-icons/font/bootstrap-icons.css";
 .header_custom{
     display: flex;
     flex-flow: column;
@@ -15,6 +16,7 @@ app-base-layout{
     .card{
         border: 0px !important;
     }
+    
 }
 .header_custome{
     display: flex;
@@ -27,33 +29,177 @@ app-base-layout{
         justify-content: space-between;
     }
 }
-.dashboard-main-table{
-    border-radius: 8px;
-    overflow: hidden;
-    background-color: rgba(0, 0, 0, 0.05) !important;
-    table.table.table-striped{
-        th {
-            background-color: rgba(0, 0, 0, 0.2);
-            border-bottom-width: 0px !important;
-            border-right: 2px solid #fff;
-            &:last-child{
-                border-right: 0px !important;
+.more-button-option{
+    display: flex !important;
+    margin: 0px 5px;
+    align-items: center;
+    button{
+        &:after{
+            display: none !important;
+        }
+    }
+}
+.benifit-total{
+    display: flex;
+    flex-flow: column;
+    margin-left: ($spacer * 1.5);
+    width: auto;
+    .benifit-total-title{
+        width: 100%;
+        background: rgba(204, 204, 204, 1);
+        padding: ($spacer * 1) ($spacer * 1);
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
+        font-weight: $font-weight-bold;
+        font-size: $font-size-base;
+        display: flex;
+        align-items: center;
+        .benifit-total-icon{
+            background: $benifit-total-icon;
+            width: 20px;
+            height: 20px;
+            background-repeat: no-repeat;
+            background-size: contain;
+            margin-right: ($spacer * 0.7);
+            display: flex;
+        }
+        .total-main{
+            width: 100%;
+            display: flex;
+        }
+        
+    }
+    .benifit-total-body{
+        width: 100%;
+        padding: ($spacer * 1);
+        background: rgba(0, 0, 0, 0.05);
+        margin-top: 4px;
+        .benifit-total-body-section{
+            gap: 10px;
+            display: flex;
+            flex-flow: column;
+            .benifit-total-row{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                gap: 20px;
+                span{
+                    font-size: $small-font-size;
+                    text-transform: uppercase;
+                    width: 100%;
+                    display: flex;
+                    flex-flow: nowrap;
+                    white-space: nowrap;
+                    &:last-child{
+                        font-weight: $font-weight-bold;
+                        align-items: center;
+                        display: flex;
+                        justify-content: end;
+                    }
+                }
             }
         }
-        tbody > tr:nth-of-type(odd) {
-            --bs-table-accent-bg: none !important;
-        }
-         td {
-            padding: 0.5rem 0.5rem;
-            background-color: transparent !important;
-            border-bottom-width: 0px !important;
-            box-shadow: none !important;
-            border-right: 2px solid #fff;
-            &:last-child{
-                border-right: 0px !important;
+        .total-estimate{
+            padding: ($spacer * 0.5);
+            border-radius: 8px;
+            background-color: #fff;
+            margin-top: ($spacer * 1);
+            span{
+                &.rupees-icon{
+                    @include rupees-icon;
+                }
+                &:last-child{
+                    font-size: ($spacer * 1.5);
+                    font-weight: $font-weight-bold;
+                    display: flex;
+                    align-items: center;
+                }
             }
         }
-        margin-bottom: 0rem !important;
+    }
+}
+.table-chart-responsive{
+    align-items: center;
+    justify-content: space-between;
+    .dashboard-chart-section{
+        width: 100%;
+        display: flex;
+        flex-flow: column;
+        .dashboard-chart-block{
+            width: 100%;
+            display: flex;
+            .table-chart-main{
+                width: 100%;
+                display: flex;
+            }
+        }
+    }
+}
+.tab-pane{
+    .dashboard-main-page{
+        display: flex;
+        flex-flow: row;
+        
+        .card-header-tab.card-header{
+            align-items: center;
+            justify-content: space-between;
+            padding: 0px 0px 10px 0px !important;
+            .card-header-title{
+                .building-icon-dashboard{
+                    margin-right: 10px;
+                }
+            }
+            .dashboard-filter-section{
+                .pagination-dropdown-filter{
+                    .pagination{
+                        margin: 0px !important;
+                    }
+                }
+                .pagination-step-show-from{
+                    background: rgba(0, 0, 0, 0.05);
+                    border-radius: 5px;
+                    display: flex;
+                    align-items: center;
+                    select{
+                        background-color: transparent;
+                        border: 0;
+                        padding: 0.185rem 2.25rem 0.185rem 0.75rem !important;
+                    }
+                }
+            }
+        }
+    }
+    .dashboard-main-page-table{
+        width: 100%;
+        .dashboard-main-table{
+            border-radius: 8px;
+            overflow: hidden;
+            background-color: rgba(0, 0, 0, 0.05) !important;
+            table.table.table-striped{
+                th {
+                    background-color: rgba(0, 0, 0, 0.2);
+                    border-bottom-width: 0px !important;
+                    border-right: 2px solid #fff;
+                    &:last-child{
+                        border-right: 0px !important;
+                    }
+                }
+                tbody > tr:nth-of-type(odd) {
+                    --bs-table-accent-bg: none !important;
+                }
+                td {
+                    padding: 0.5rem 0.5rem;
+                    background-color: transparent !important;
+                    border-bottom-width: 0px !important;
+                    box-shadow: none !important;
+                    border-right: 2px solid #fff;
+                    &:last-child{
+                        border-right: 0px !important;
+                    }
+                }
+                margin-bottom: 0rem !important;
+            }
+        }
     }
 }
 .table-header-section{
@@ -66,4 +212,91 @@ app-base-layout{
     height: 24px;
     display: $d-flex;
     background-image: $building-icon-dashboard;
+}
+.overview-tab-true,.account-tab-true,.setting-tab-true{
+    display: flex;
+}
+.m-0{
+    margin: 0 !important;
+}
+.ml-5{
+    margin-left: 5px !important;
+}
+.mr-5{
+    margin-right: 5px !important;
+}
+.mt-5{
+    margin-top: 5px !important;
+}
+.mb-5{
+    margin-bottom: 5px !important;
+}
+
+.ml-10{
+    margin-left: 10px !important;
+}
+.mr-10{
+    margin-right: 10px !important;
+}
+.mt-10{
+    margin-top: 10px !important;
+}
+.mb-10{
+    margin-bottom: 10px !important;
+}
+
+.ml-15{
+    margin-left: 15px !important;
+}
+.mr-15{
+    margin-right: 15px !important;
+}
+.mt-15{
+    margin-top: 15px !important;
+}
+.mb-15{
+    margin-bottom: 15px !important;
+}
+
+.ml-20{
+    margin-left: 20px !important;
+}
+.mr-15{
+    margin-right: 20px !important;
+}
+.mt-15{
+    margin-top: 20px !important;
+}
+.mb-15{
+    margin-bottom: 20px !important;
+}
+.gap-0{
+    gap: 0 !important;
+}
+.gap-10{
+    gap: 10px !important;
+}
+.gap-15{
+    gap: 15px !important;
+}
+.gap-20{
+    gap: 20px !important;
+}
+.gap-25{
+    gap: 25px !important;
+}
+.gap-30{
+    gap: 30px !important;
+}
+.w-100{
+    width: 100% !important;
+}
+.align-item-center{
+    align-items: center;
+}
+.justify-content-center{
+    justify-content: center;
+}
+.flex-flow-column{
+    flex-flow: column;
 }
