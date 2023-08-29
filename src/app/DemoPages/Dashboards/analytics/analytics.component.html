@@ -1,7 +1,40 @@
-<app-page-title [heading]="heading" [subheading]="subheading" [icon]="icon"></app-page-title>
+<app-page-title ></app-page-title>
 
 <div class="mb-3 card">
-
+  <div class="app-page-title">
+    <div class="page-title-wrapper">
+      <div class="page-title-heading">
+        <!-- <div class="page-title-icon">
+          <i class="icon {{icon}}"></i>
+        </div>
+        <div>
+          {{heading}}
+          <div
+            class="page-title-subheading">
+            {{subheading}}
+          </div>
+        </div> -->
+        <ul  class="nav dashboard-main-tabs nav-pills">
+          <li>
+            <a (click)="onclick('overview')" [class]="'overview-tab-'+overview" data-toggle="tab">Overview</a>
+          </li>
+          <li>
+            <a (click)="onclick('account')" [class]="'account-tab-'+accounts" data-toggle="tab">Accounts</a>
+          </li>
+          <li>
+            <a (click)="onclick('setting')" [class]="'setting-tab-'+setting" data-toggle="tab">Settings</a>
+          </li>
+        </ul>
+      </div>
+      <div class="page-title-actions">
+        <button type="button" class="btn-shadow d-inline-flex align-items-center btn btn-dark" routerLink="./manageplan">
+          <fa-icon [icon]="faPlus" class="me-2"></fa-icon>
+          Manage Plans
+        </button>
+      </div>
+    </div>
+  </div>
+  
   <div class="g-0 row">
     <!-- <div class="col-sm-6 col-md-4 col-xl-4">
       <div class="card no-shadow rm-border bg-transparent widget-chart text-start">
@@ -59,7 +92,16 @@
         </div>
       </div>
     </div> -->
-    <app-regular></app-regular>
+    <div class="tab-pane active" *ngIf="overviewcontainer" id="OverviewApp">
+      
+      <app-regular></app-regular>
+    </div>
+    <div class="tab-pane active" *ngIf="accountscontainer" id="AccountsApp">
+      <app-regular></app-regular>
+    </div>
+    <div class="tab-pane active" *ngIf="settingcontainer" id="SettingsApp">
+      <app-regular></app-regular>
+    </div>
   </div>
   <div class="text-center d-block p-3 card-footer">
     <button class="btn-pill btn-shadow btn-wide fsize-1 btn btn-primary btn-lg">

@@ -1,11 +1,11 @@
 // Footer base
 
 .app-footer {
-  height: $app-header-height;
-
+  height: auto;
+  background-color: rgba(16, 16, 16, 1);
   .app-footer__inner {
-    padding: 0 $layout-spacer-x 0 ($layout-spacer-x / 2);
-    height: $app-header-height;
+    padding: 0 ($spacer * 2.75) 0 ($spacer * 2.75);
+    height: auto;
 
     display: flex;
     align-content: center;
@@ -19,6 +19,55 @@
     .app-footer-right {
       margin-left: auto;
       display: flex;
+    }
+    .footer-inner-top{
+      @media only screen and (min-width: 320px) and (max-width: 900px)  {
+        gap: 20px;
+        flex-flow: column;
+      } 
+      .app-footer-left{
+        @media only screen and (min-width: 320px) and (max-width: 900px)  {
+          width: 100%;
+        } 
+      }
+      .app-footer-right{
+        @media only screen and (min-width: 320px) and (max-width: 900px)  {
+          width: 100%;
+        } 
+      }
+    }
+    .footer-inner-bottom{
+      .footer-link{
+        color: $white;
+        .footer-link-set{
+          gap: 50px;
+          a{
+            color: $white;
+            font-size: 17px;
+            &:hover{
+              text-decoration: underline !important;
+            }
+          }
+          @media only screen and (min-width: 320px) and (max-width: 900px)  {
+            flex-wrap: wrap;
+            gap: 5px !important;
+          } 
+        }
+        @media only screen and (min-width: 320px) and (max-width: 900px)  {
+          overflow: hidden !important;
+        } 
+      }
+      @media only screen and (min-width: 320px) and (max-width: 900px)  {
+        flex-wrap: wrap;
+        width: 100%;
+        display: flex;
+      } 
+    }
+    .footer-copy-right{
+      border-top: 1px solid $quantique-brand-color;
+      .copy-right-text{
+        color: $white;
+      }
     }
   }
 }

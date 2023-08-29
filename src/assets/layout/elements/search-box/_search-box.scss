@@ -1,5 +1,5 @@
 // Search Box
-
+@import '../../../../assets/components/bootstrap5/variables';
 $search-box-size: 42px;
 
 .search-wrapper {
@@ -10,6 +10,7 @@ $search-box-size: 42px;
     height: $search-box-size;
     width: $search-box-size;
     overflow: hidden;
+    display: $d-flex;
     position: relative;
     transition: all 0.3s ease-in-out;
 
@@ -17,14 +18,13 @@ $search-box-size: 42px;
       width: 100%;
       padding: 0 70px 0 20px;
       opacity: 0;
-      position: absolute;
+      position: relative;
       top: 0;
       left: 0;
       background: transparent;
       box-sizing: border-box;
       border: none;
       outline: none;
-      transform: translate(0, 60px);
       transition: all .3s cubic-bezier(0.000, 0.105, 0.035, 1.570);
       transition-delay: 0.3s;
       font-size: $font-size-base;
@@ -41,7 +41,6 @@ $search-box-size: 42px;
       float: right;
       cursor: pointer;
       transition: all 0.3s ease-in-out;
-      background: rgba(0, 0, 0, .06);
       @include border-radius(30px);
 
       span {
@@ -122,13 +121,12 @@ $search-box-size: 42px;
 
     .input-holder {
       width: 290px;
-      border-radius: 50px;
+      border-radius: 5px;
       background: rgba(0, 0, 0, 0.05);
       transition: all .5s cubic-bezier(0.000, 0.105, 0.035, 1.570);
 
       .search-input {
         opacity: 1;
-        transform: translate(0, 11px);
       }
 
       .search-icon {

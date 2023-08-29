@@ -5,9 +5,10 @@ import {Label} from 'ng2-charts';
 
 @Component({
   selector: 'app-manageplan ',
-  templateUrl: './manageplan.component.html',
+  templateUrl: './services.component.html',
+  styleUrls:['services.component.scss'],
 })
-export class ManagePlansComponent implements OnInit {
+export class ServicesPage implements OnInit {
   public barChartOptions: ChartOptions = {
     responsive: true,
     // We use these empty structures as placeholders for dynamic theming.

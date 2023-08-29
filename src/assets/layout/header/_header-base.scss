@@ -1,5 +1,5 @@
 // Header Base
-
+@import '../../components/bootstrap5/variables';
 .app-header {
   height: $app-header-height;
   display: flex;
@@ -25,9 +25,10 @@
     align-content: center;
     flex: 1;
     padding-left: 0;
-    height: $app-header-height;
+    justify-content: space-between;
+    height: auto;
     transition: all .2s;
-
+    flex-flow: row-reverse;
     .app-header-left {
       display: flex;
       align-items: center;
@@ -48,8 +49,10 @@
           &.expanded {
             padding: 0;
             height: auto;
+            padding: 10px 10px;
             visibility:visible !important;
             top: 100%;
+            background-color: $white;
             li{
               list-style: none;
               a{
@@ -67,6 +70,24 @@
           width: auto;
           margin: 0;
           min-width: auto;
+        }
+        @media only screen and (min-width: 320px) and (max-width: 900px)  {
+          flex-flow: column !important;
+        } 
+      }
+      app-search-box{
+        .search-wrapper.active{
+          @media only screen and (min-width: 320px) and (max-width: 900px)  {
+            width: 100% !important;
+          }
+          .input-holder{
+            @media only screen and (min-width: 320px) and (max-width: 900px)  {
+              width: 100% !important;
+            }
+          }
+        }
+        @media only screen and (min-width: 320px) and (max-width: 900px)  {
+          flex-flow: column !important;
         }
       }
     }
