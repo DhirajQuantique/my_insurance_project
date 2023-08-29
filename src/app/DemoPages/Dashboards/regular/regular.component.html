@@ -1,138 +1,330 @@
-<div class="mb-3 card">
-  <div class="card-header-tab card-header">
-    <div class="card-header-title font-size-lg text-capitalize fw-normal">
-      <span class="building-icon-dashboard">
-        
-      </span>
-      Business Partner Report
-    </div>
-    <div class="pagination-step-show-from">
-      <select
-        class="form-select"
-        style="width: auto"
-        [(ngModel)]="pageSize"
-        (ngModelChange)="refreshCountries()"
+<div class="mb-3 card dashboard-main-page">
+  <div class="dashboard-main-page-table">
+    <div class="card-header-tab card-header d-flex p-0">
+      <div
+        class="card-header-title font-size-lg text-capitalize fw-normal d-flex"
       >
-        <option [ngValue]="2">2</option>
-        <option [ngValue]="4">4</option>
-        <option [ngValue]="6">6</option>
-      </select>
+        <span class="building-icon-dashboard"> </span>
+        Business Partner Report
+      </div>
+      <div class="dashboard-filter-section d-flex align-item-center">
+        <span>
+          <div
+            class="d-flex justify-content-between p-2 pagination-dropdown-filter"
+          >
+            Show from {{ page }} - {{ pageSize }}
+            <!-- <ngb-pagination
+              [collectionSize]="collectionSize"
+              [(page)]="page"
+              [pageSize]="pageSize"
+              (pageChange)="refreshCountries()"
+            >
+            </ngb-pagination> -->
+          </div>
+        </span>
+        <div class="pagination-step-show-from">
+          <select
+            class="form-select"
+            style="width: auto"
+            [(ngModel)]="pageSize"
+            (ngModelChange)="refreshPagination()"
+          >
+            <option
+              *ngFor="let item of this.dataList; let i = index"
+              [ngValue]="item.code"
+              [selected]="i == 0"
+            >
+              {{ item.pagination }}
+            </option>
+            <!-- <option [ngValue]="10">1</option>
+            <option [ngValue]="20">2</option>
+            <option [ngValue]="30">3</option> -->
+          </select>
+        </div>
+        <div ngbDropdown class="d-inline-block more-button-option">
+          <button
+            class="btn btn-outline-primary border-0 p-0"
+            id="dropdownBasic1"
+            ngbDropdownToggle
+          >
+            <i class="bi bi-three-dots-vertical"></i>
+          </button>
+          <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+            <button class="dropdown-item">Action - 1</button>
+            <button class="dropdown-item">Another Action</button>
+            <button class="dropdown-item">Something else is here</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card main-card mb-3 dashboard-main-table">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <!-- <th scope="col" *ngFor="let header of countries">
+          <span>{{header.TITLE}}</span>
+          <span>{{header}}</span>
+        </th> -->
+            <th scope="col">PARTNER</th>
+            <th scope="col">
+              <div class="header_custom">
+                <div class="header_custom_title">
+                  <span>FTD</span>
+                </div>
+                <div class="header_custom_titles">
+                  <span>POLICY</span>
+                  <span>AMOUNT</span>
+                </div>
+              </div>
+            </th>
+            <th scope="col">
+              <div class="header_custom">
+                <div class="header_custom_title">
+                  <span>WTD</span>
+                </div>
+                <div class="header_custom_titles">
+                  <span>POLICY</span>
+                  <span>AMOUNT</span>
+                </div>
+              </div>
+            </th>
+            <th scope="col">
+              <div class="header_custom">
+                <div class="header_custom_title">
+                  <span>MTD</span>
+                </div>
+                <div class="header_custom_titles">
+                  <span>POLICY</span>
+                  <span>AMOUNT</span>
+                </div>
+              </div>
+            </th>
+            <th scope="col">
+              <div class="header_custom">
+                <div class="header_custom_title">
+                  <span>YTD</span>
+                </div>
+                <div class="header_custom_titles">
+                  <span>POLICY</span>
+                  <span>AMOUNT</span>
+                </div>
+              </div>
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let country of countries; index as i">
+            <td scope="row">{{ country.name }}</td>
+            <td>
+              <div class="header_custome">
+                <span class="header_custom_title">{{
+                  country.area | number
+                }}</span>
+                <span class="header_custom_titles">{{
+                  country.population | number
+                }}</span>
+              </div>
+            </td>
+            <td>
+              <div class="header_custome">
+                <span class="header_custom_title">{{
+                  country.area | number
+                }}</span>
+                <span class="header_custom_titles">{{
+                  country.population | number
+                }}</span>
+              </div>
+            </td>
+            <td>
+              <div class="header_custome">
+                <span class="header_custom_title">{{
+                  country.area | number
+                }}</span>
+                <span class="header_custom_titles">{{
+                  country.population | number
+                }}</span>
+              </div>
+            </td>
+            <td>
+              <div class="header_custome">
+                <span class="header_custom_title">{{
+                  country.area | number
+                }}</span>
+                <span class="header_custom_titles">{{
+                  country.population | number
+                }}</span>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <!-- <div class="d-flex justify-content-between p-2">
+        <ngb-pagination
+          [collectionSize]="collectionSize"
+          [(page)]="page"
+          [pageSize]="pageSize"
+          (pageChange)="refreshCountries()"
+        >
+        </ngb-pagination>
+      </div> -->
     </div>
   </div>
- 
-  <div class="card main-card mb-3 dashboard-main-table">
-    <table class="table table-striped">
-      <thead>
-        <tr>
-          <!-- <th scope="col" *ngFor="let header of countries">
-        <span>{{header.TITLE}}</span>
-        <span>{{header}}</span>
-      </th> -->
-          <th scope="col">PARTNER</th>
-          <th scope="col">
-            <div class="header_custom">
-              <div class="header_custom_title">
-                <span>FTD</span>
-              </div>
-              <div class="header_custom_titles">
-                <span>POLICY</span>
-                <span>AMOUNT</span>
-              </div>
-            </div>
-          </th>
-          <th scope="col">
-            <div class="header_custom">
-              <div class="header_custom_title">
-                <span>WTD</span>
-              </div>
-              <div class="header_custom_titles">
-                <span>POLICY</span>
-                <span>AMOUNT</span>
-              </div>
-            </div>
-          </th>
-          <th scope="col">
-            <div class="header_custom">
-              <div class="header_custom_title">
-                <span>MTD</span>
-              </div>
-              <div class="header_custom_titles">
-                <span>POLICY</span>
-                <span>AMOUNT</span>
-              </div>
-            </div>
-          </th>
-          <th scope="col">
-            <div class="header_custom">
-              <div class="header_custom_title">
-                <span>YTD</span>
-              </div>
-              <div class="header_custom_titles">
-                <span>POLICY</span>
-                <span>AMOUNT</span>
-              </div>
-            </div>
-          </th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr *ngFor="let country of countries; index as i">
-          <td scope="row">{{ country.name }}</td>
-          <td>
-            <div class="header_custome">
-              <span class="header_custom_title">{{
-                country.area | number
-              }}</span>
-              <span class="header_custom_titles">{{
-                country.population | number
-              }}</span>
-            </div>
-          </td>
-          <td>
-            <div class="header_custome">
-              <span class="header_custom_title">{{
-                country.area | number
-              }}</span>
-              <span class="header_custom_titles">{{
-                country.population | number
-              }}</span>
-            </div>
-          </td>
-          <td>
-            <div class="header_custome">
-              <span class="header_custom_title">{{
-                country.area | number
-              }}</span>
-              <span class="header_custom_titles">{{
-                country.population | number
-              }}</span>
-            </div>
-          </td>
-          <td>
-            <div class="header_custome">
-              <span class="header_custom_title">{{
-                country.area | number
-              }}</span>
-              <span class="header_custom_titles">{{
-                country.population | number
-              }}</span>
-            </div>
-          </td>
-        </tr>
-      </tbody>
-    </table>
-    <div class="d-flex justify-content-between p-2">
-      <ngb-pagination
-        [collectionSize]="collectionSize"
-        [(page)]="page"
-        [pageSize]="pageSize"
-        (pageChange)="refreshCountries()"
-      >
-      </ngb-pagination>
+  <div class="benifit-total">
+    <div class="benifit-total-title">
+      <div class="benefit total-main">
+        <span class="benifit-total-icon"></span><span>Benefit total</span>
+      </div>
+      <div ngbDropdown class="d-inline-block more-button-option">
+        <button
+          class="btn btn-outline-primary border-0 p-0"
+          id="dropdownBasic1"
+          ngbDropdownToggle
+        >
+          <i class="bi bi-three-dots-vertical"></i>
+        </button>
+        <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+          <button class="dropdown-item">Action - 1</button>
+          <button class="dropdown-item">Another Action</button>
+          <button class="dropdown-item">Something else is here</button>
+        </div>
+      </div>
+    </div>
+    <div class="benifit-total-body">
+      <div class="benifit-total-body-section">
+        <div class="benifit-total-row">
+          <span>Last 7 days</span>
+          <span class="">12 Admin</span>
+        </div>
+        <div class="benifit-total-row">
+          <span>Last Month</span>
+          <span class="">36 Admin</span>
+        </div>
+        <div class="benifit-total-row">
+          <span>Annual</span>
+          <span class="">339 Admin</span>
+        </div>
+        <div class="benifit-total-row">
+          <span>Over 5 Years</span>
+          <span class="">5,489 Admins</span>
+        </div>
+      </div>
+      <div class="total-estimate">
+        <span>Earned Estimate </span>
+        <span class=""><span class="rupees-icon"></span>200,24,535.00</span>
+      </div>
     </div>
   </div>
 </div>
-<!-- 
+<div class="main-card mb-3 card">
+  <div class="card-header p-0">
+    <div class="table-responsive table-chart-responsive d-flex gap-20">
+      <div class="dashboard-chart-section">
+        <div class="dashboard-chart-block col-md-12 d-flex gap-20">
+          <div class="table-chart-main flex-flow-column col-md-5">
+            <div
+              class="card-header-title font-size-lg text-capitalize fw-normal d-flex gap-10"
+            >
+              <span class="analytics_icon"></span><b>Analytics Overview</b>
+            </div>
+            <div class="d-block w-100">
+              <canvas
+                baseChart
+                [datasets]="barChartData"
+                [labels]="barChartLabels"
+                [options]="barChartOptions"
+                [legend]="barChartLegend"
+                [chartType]="barChartType"
+                (chartHover)="chartHovered($event)"
+                (chartClick)="chartClicked($event)"
+              ></canvas>
+            </div>
+          </div>
+          <!-- chart one -->
+          <div class="table-chart-main flex-flow-column col-md-5">
+            <div
+              class="card-header-title font-size-lg text-capitalize fw-normal d-flex gap-10"
+            >
+              <span class="data_analytics_icon"></span><b>Data Analysis</b>
+            </div>
+            <div class="w-100">
+              <div>
+                <div style="display: block">
+                  <canvas
+                    baseChart
+                    [data]="polarAreaChartData"
+                    [labels]="polarAreaChartLabels"
+                    [legend]="polarAreaLegend"
+                    [chartType]="polarAreaChartType"
+                  >
+                  </canvas>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- chart two -->
+        </div>
+        <div class="text-center">
+          <button
+            mat-button
+            mat-raised-button
+            color="primary"
+            (click)="randomize()"
+          >
+            Update
+          </button>
+        </div>
+      </div>
+      <div class="benifit-total">
+        <div class="benifit-total-title">
+          <div class="benefit total-main gap-10">
+            <span class="activities-icon"></span>
+            <span>Activities</span>
+          </div>
+          <div ngbDropdown class="d-inline-block more-button-option">
+            <button
+              class="btn btn-outline-primary border-0 p-0"
+              id="dropdownBasic1"
+              ngbDropdownToggle
+            >
+              <i class="bi bi-three-dots-vertical"></i>
+            </button>
+            <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+              <button class="dropdown-item">Action - 1</button>
+              <button class="dropdown-item">Another Action</button>
+              <button class="dropdown-item">Something else is here</button>
+            </div>
+          </div>
+        </div>
+        <div class="benifit-total-body">
+          <div class="benifit-total-body-section">
+            <div class="benifit-total-row">
+              <span>Last 7 days</span>
+              <span class="">12 Admin</span>
+            </div>
+            <div class="benifit-total-row">
+              <span>Last Month</span>
+              <span class="">36 Admin</span>
+            </div>
+            <div class="benifit-total-row">
+              <span>Annual</span>
+              <span class="">339 Admin</span>
+            </div>
+            <div class="benifit-total-row">
+              <span>Over 5 Years</span>
+              <span class="">5,489 Admins</span>
+            </div>
+          </div>
+          <div class="total-estimate">
+            <span>Earned Estimate </span>
+            <span class=""><span class="rupees-icon"></span>200,24,535.00</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 
 <div class="main-card mb-3 card">
   <div class="card-header">
     Active Users
@@ -753,3 +945,4 @@
     </div>
   </div>
 </div> -->
+</div>
