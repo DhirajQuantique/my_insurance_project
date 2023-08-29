@@ -14,7 +14,6 @@ import {HttpClientModule} from '@angular/common/http';
 import {AppComponent} from './app.component';
 
 // BOOTSTRAP COMPONENTS
-
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import {PerfectScrollbarModule} from 'ngx-perfect-scrollbar';
 import {PERFECT_SCROLLBAR_CONFIG} from 'ngx-perfect-scrollbar';
@@ -48,7 +47,7 @@ import {FooterComponent} from './Layout/Components/footer/footer.component';
 // Dashboards
 
 import {AnalyticsComponent} from './DemoPages/Dashboards/analytics/analytics.component';
-import { ManagePlansComponent } from './DemoPages/Dashboards/ManagePlans/manageplan/manageplan.component';
+import { ManagePlansComponent } from './DemoPages/Dashboards/ManagePlans/manageplan.component';
 // Pages
 
 import {ForgotPasswordBoxedComponent} from './DemoPages/UserPages/forgot-password-boxed/forgot-password-boxed.component';
@@ -67,7 +66,6 @@ import {IconsComponent} from './DemoPages/Elements/icons/icons.component';
 // Components
 
 import {AccordionsComponent} from './DemoPages/Components/accordions/accordions.component';
-import {TabsComponent} from './DemoPages/Components/tabs/tabs.component';
 import {CarouselComponent} from './DemoPages/Components/carousel/carousel.component';
 import {ModalsComponent} from './DemoPages/Components/modals/modals.component';
 import {ProgressBarComponent} from './DemoPages/Components/progress-bar/progress-bar.component';
@@ -76,7 +74,7 @@ import {TooltipsPopoversComponent} from './DemoPages/Components/tooltips-popover
 
 // Tables
 
-import {RegularComponent} from './DemoPages/Tables/regular/regular.component';
+import {RegularComponent} from './DemoPages/Dashboards/regular/regular.component';
 import {TablesMainComponent} from './DemoPages/Tables/tables-main/tables-main.component';
 
 // Widgets
@@ -141,8 +139,6 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
 
     AnalyticsComponent,
     ManagePlansComponent,
-    // User Pages
-
     ForgotPasswordBoxedComponent,
     LoginBoxedComponent,
     RegisterBoxedComponent,
@@ -159,7 +155,7 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
     // Components
 
     AccordionsComponent,
-    TabsComponent,
+    CardsComponent,
     CarouselComponent,
     ModalsComponent,
     ProgressBarComponent,
