@@ -64,14 +64,10 @@ const routes: Routes = [
       // Dashboads
 
       {path: '', component: AnalyticsComponent, data: {extraParameter: 'dashboardsMenu'}},
-<<<<<<< HEAD
-      { path: 'manageplan', component: ManagePlansComponent },
-      {path: 'createnewplan',component:CreateNewPlanComponent},
-=======
       {path: 'manageplan',component:ManagePlansComponent},
       {path: 'aboutus',component:Aboutus},
       {path: 'services',component:ServicesPage},
->>>>>>> 9be5eb258b87f80a1ec4d562ba83c96b8cc778c1
+      {path: 'createplan',component:CreateNewPlanComponent},
       // Elements
 
       {path: 'elements/buttons-standard', component: StandardComponent, data: {extraParameter: 'elementsMenu'}},

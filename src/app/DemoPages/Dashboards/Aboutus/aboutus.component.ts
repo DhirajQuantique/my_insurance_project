@@ -1,7 +1,7 @@
-import {Component, OnInit} from '@angular/core';
-import {ChartOptions, ChartType, ChartDataSets} from 'chart.js';
-import * as pluginDataLabels from 'chartjs-plugin-datalabels';
-import {Label} from 'ng2-charts';
+import {Component, OnInit, Output, Type} from '@angular/core';
+import { NgbDropdown} from '@ng-bootstrap/ng-bootstrap';
+import { ChartOptions, ChartType, ChartDataSets } from 'chart.js';
+import { Label, SingleDataSet } from 'ng2-charts';
 
 @Component({
   selector: 'app-manageplan ',
@@ -9,52 +9,24 @@ import {Label} from 'ng2-charts';
   styleUrls: ['./aboutus.component.scss'],
 })
 export class Aboutus implements OnInit {
-  public barChartOptions: ChartOptions = {
-    responsive: true,
-    // We use these empty structures as placeholders for dynamic theming.
-    scales: {xAxes: [{}], yAxes: [{}]},
-    plugins: {
-      datalabels: {
-        anchor: 'end',
-        align: 'end',
-      }
-    }
-  };
-  public barChartLabels: Label[] = ['2006', '2007', '2008', '2009', '2010', '2011', '2012'];
-  public barChartType: ChartType = 'bar';
-  public barChartLegend = true;
-  public barChartPlugins = [pluginDataLabels];
-
-  public barChartData: ChartDataSets[] = [
-    {data: [65, 59, 80, 81, 56, 55, 40], label: 'Series A'},
-    {data: [28, 48, 40, 19, 86, 27, 90], label: 'Series B'}
+  title = 'Angular Search Using ng2-search-filter';
+  searchText:string;
+  heroes = [
+    { id: 11, name: 'Mr. Nice', country: 'India' },
+    { id: 12, name: 'Narco' , country: 'USA'},
+    { id: 13, name: 'Bombasto' , country: 'UK'},
+    { id: 14, name: 'Celeritas' , country: 'Canada' },
+    { id: 15, name: 'Magneta' , country: 'Russia'},
+    { id: 16, name: 'RubberMan' , country: 'China'},
+    { id: 17, name: 'Dynama' , country: 'Germany'},
+    { id: 18, name: 'Dr IQ' , country: 'Hong Kong'},
+    { id: 19, name: 'Magma' , country: 'South Africa'},
+    { id: 20, name: 'Tornado' , country: 'Sri Lanka'}
   ];
-
   constructor() {
   }
 
   ngOnInit() {
   }
 
-  // events
-  public chartClicked({event, active}: { event: MouseEvent, active: {}[] }): void {
-    console.log(event, active);
-  }
-
-  public chartHovered({event, active}: { event: MouseEvent, active: {}[] }): void {
-    console.log(event, active);
-  }
-
-  public randomize(): void {
-    // Only Change 3 values
-    const data = [
-      Math.round(Math.random() * 100),
-      59,
-      80,
-      (Math.random() * 100),
-      56,
-      (Math.random() * 100),
-      40];
-    this.barChartData[0].data = data;
-  }
 }

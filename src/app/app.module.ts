@@ -18,8 +18,7 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import {PerfectScrollbarModule} from 'ngx-perfect-scrollbar';
 import {PERFECT_SCROLLBAR_CONFIG} from 'ngx-perfect-scrollbar';
 import {PerfectScrollbarConfigInterface} from 'ngx-perfect-scrollbar';
-import { ChartsModule } from 'ng2-charts';
-
+import {ChartsModule} from 'ng2-charts';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 // LAYOUT
@@ -48,6 +47,8 @@ import {FooterComponent} from './Layout/Components/footer/footer.component';
 
 import {AnalyticsComponent} from './DemoPages/Dashboards/analytics/analytics.component';
 import { ManagePlansComponent } from './DemoPages/Dashboards/ManagePlans/manageplan.component';
+import { Aboutus } from './DemoPages/Dashboards/Aboutus/aboutus.component';
+
 // Pages
 
 import {ForgotPasswordBoxedComponent} from './DemoPages/UserPages/forgot-password-boxed/forgot-password-boxed.component';
@@ -102,6 +103,8 @@ import {DynamicChartComponent} from './DemoPages/Charts/chartjs/examples/dynamic
 import {DoughnutChartComponent} from './DemoPages/Charts/chartjs/examples/doughnut-chart/doughnut-chart.component';
 import {PieChartComponent} from './DemoPages/Charts/chartjs/examples/pie-chart/pie-chart.component';
 import { MainMenuComponent } from './Layout/Components/header/elements/main-menu/main-menu';
+import { CustomFilterPipe } from './custompipes/searchfilter.pipe';
+import { ServicesPage } from './DemoPages/Dashboards/Services/services.component';
 
 const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
   suppressScrollX: true
@@ -116,7 +119,7 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
     BaseLayoutComponent,
     PagesLayoutComponent,
     PageTitleComponent,
-
+    CustomFilterPipe,
     // HEADER
 
     HeaderComponent,
@@ -139,6 +142,8 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
 
     AnalyticsComponent,
     ManagePlansComponent,
+    Aboutus,
+    ServicesPage,
     ForgotPasswordBoxedComponent,
     LoginBoxedComponent,
     RegisterBoxedComponent,

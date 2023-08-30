@@ -1,16 +1,26 @@
 <ul class="header-main-menu">
-    <a class="meain-menu-dash" routerLink="" routerLinkActive="active-item"
-    [routerLinkActiveOptions]="{exact: true}">Dashboard</a>
-    <a class="meain-menu-dash">
+    <li><a class="meain-menu-dash" routerLink="" routerLinkActive="active-item"
+    [routerLinkActiveOptions]="{exact: true}">Dashboard</a></li>
+    <li class="meain-menu-dash">
         <a class="meain-menu-dash"  id="servicesbutton" (click)="showSubmenu = !showSubmenu" data-bs-toggle="dropdown" aria-expanded="false">Services</a>
         <ul class="dropdown-menu dropdown-toggle" class="submenu" [ngClass]="{'expanded' : showSubmenu}" aria-labelledby="servicesbutton">
-            <li><a class="dropdown-item" href="#">Action</a></li>
-            <li><a class="dropdown-item" href="#">Another action</a></li>
-            <li><a class="dropdown-item" href="#">Something else here</a></li>
+            <li><b>Travel</b></li>
+            <li class="d-flex"><a class="dropdown-item pr-10" href="#" (click)="muteStream()"  data-bs-toggle="dropdown" aria-expanded="false">Business Partner Access</a><i class="bi bi-chevron-right"></i></li>
+            <ul class="dropdown-menu dropdown-toggle" [ngClass]="status ? 'expanded' : ''" class="secondsubmenu"  aria-labelledby="servicesbutton">
+                <li><a class="dropdown-item" href="#">Business Partner Access</a></li>
+                <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
+            <li class="d-flex"><a class="dropdown-item pr-10" href="#" (click)="showbusinees = !showbusinees" data-bs-toggle="dropdown" aria-expanded="false">Manage Policies</a><i class="bi bi-chevron-right"></i></li>
+            <ul class="dropdown-menu dropdown-toggle" class="secondsubmenu" [ngClass]="{'expanded' : showbusinees}" aria-labelledby="servicesbutton">
+                <li><a class="dropdown-item" href="#">Business Partner Access</a></li>
+                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                <li><a class="dropdown-item" routerLink="/createplan" routerLinkActive="active-item"
+                [routerLinkActiveOptions]="{exact: true}">Create Plan</a></li>
+            </ul>
         </ul>
-    </a>
-    <a class="meain-menu-dash" routerLink="/aboutus" routerLinkActive="active-item"
-    [routerLinkActiveOptions]="{exact: true}">About Us</a>
-    <a class="meain-menu-dash" routerLink="/services" routerLinkActive="active-item"
-    [routerLinkActiveOptions]="{exact: true}">Services</a>
+    </li>
+    <li><a class="meain-menu-dash" routerLink="/aboutus" routerLinkActive="active-item"
+    [routerLinkActiveOptions]="{exact: true}">About Us</a></li>
+    <li><a class="meain-menu-dash" routerLink="/services" routerLinkActive="active-item"
+    [routerLinkActiveOptions]="{exact: true}">Services</a></li>
   </ul>

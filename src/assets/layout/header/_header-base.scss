@@ -38,6 +38,9 @@
         gap:$gap-20;
         margin: 0;
         padding: 0px 20px;
+        li{
+          list-style: none !important;
+        }
         .meain-menu-dash{
           display: flex;
         }
@@ -46,17 +49,59 @@
           height: 0;
           visibility: hidden;
           position: absolute;
+          padding: 0;
+          padding: 10px 10px;
+          top: 100%;
+          background-color: $dropdown-menu-bg;
           &.expanded {
-            padding: 0;
             height: auto;
-            padding: 10px 10px;
             visibility:visible !important;
-            top: 100%;
-            background-color: $white;
-            li{
-              list-style: none;
-              a{
-                padding: 10px 0px !important;
+          }
+          li{
+            list-style: none;
+            padding: 10px 10px !important;
+            &:focus,&:hover {
+              color: #1e2125;
+              background-color: #d1f3ff;
+              background-image: var(--bs-gradient);
+            }
+            a{
+              padding: 0;
+              &:focus,&:hover {
+                color: #1e2125;
+                background-color: transparent !important;
+                background-image: none !important;
+              }
+            }
+          }
+        }
+        .secondsubmenu{
+          transition: 300ms ease-in-out;
+          height: 0;
+          visibility: hidden;
+          position: absolute;
+          padding: 0;
+          padding: 10px 10px;
+          left: 100%;
+          top: 50%;
+          background-color: $dropdown-menu-bg;
+          &.expanded {
+            height: auto;
+            visibility:visible !important;
+          }
+          li{
+            list-style: none;
+            padding: 10px 10px !important;
+            &:focus,&:hover {
+              color: #1e2125;
+              background-color: #d1f3ff;
+              background-image: var(--bs-gradient);
+            }
+            a{
+              &:focus,&:hover {
+                color: #1e2125;
+                background-color: transparent !important;
+                background-image: none !important;
               }
             }
           }
