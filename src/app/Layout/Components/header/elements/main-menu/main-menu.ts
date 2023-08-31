@@ -1,25 +1,15 @@
-import { Component, OnInit } from '@angular/core';
-import { NgbDropdown } from '@ng-bootstrap/ng-bootstrap';
+import { Component, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-manimenu',
   templateUrl: './main-menu-component.html',
+  styleUrls: ['./main-menu.component.scss'],
 })
 export class MainMenuComponent implements OnInit {
 
-  public isActive: any;
-  showSubmenu: boolean = false;
-  showbusinees: boolean = false;
-  status: boolean;
-  constructor() { }
-  autoClose: NgbDropdown['autoClose'] = false;
-
-  toggleAutoClose() {
-    this.autoClose = !this.autoClose ? 'inside' : false;
+  constructor() { 
   }
+
   ngOnInit() {
   }
-  muteStream() {
-    this.status = !this.status;
- }
 }
