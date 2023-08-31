@@ -142,6 +142,7 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
     AnalyticsComponent,
     Aboutus,
     ServicesPage,
+    ManagePlansComponent,
     ForgotPasswordBoxedComponent,
     LoginBoxedComponent,
     RegisterBoxedComponent,
