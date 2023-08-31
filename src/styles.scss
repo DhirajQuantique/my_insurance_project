@@ -15,9 +15,14 @@
         justify-content: space-between;
     }
 }
-
-app-base-layout {
-    .card {
+.notification-language{
+    display: flex;
+    .notification-dropdown{
+        display: flex;
+    }
+}
+app-base-layout{
+    .card{
         border: 0px !important;
     }
 

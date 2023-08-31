@@ -8,12 +8,7 @@ import {PagesLayoutComponent} from './Layout/pages-layout/pages-layout.component
 // Dashboards
 
 import {AnalyticsComponent} from './DemoPages/Dashboards/analytics/analytics.component';
-<<<<<<< Updated upstream
 import { ManagePlansComponent } from './DemoPages/Dashboards/ManagePlans/manageplan.component';
-=======
-import { ManagePlansComponent } from './DemoPages/Dashboards/ManagePlans/manageplan/manageplan.component';
-import { CreateNewPlanComponent } from './DemoPages/Dashboards/CreateNewPlan/create-new-plan.component';
->>>>>>> Stashed changes
 
 // Pages
 
