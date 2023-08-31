@@ -1,0 +1,406 @@
+@import '../../../../assets/components/bootstrap5/variables';
+@import "~bootstrap-icons/font/bootstrap-icons.css";
+
+.create-plan-wrapper {
+    margin-top: ($spacer * 1);
+    padding: 0px 90px;
+    height: 3030px;
+
+    .container {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    .create_new_plan_section_one {
+        margin-top: ($spacer * 3);
+    }
+
+    .create_new_plan_section_two {
+        margin-top: ($spacer * 7);
+    }
+
+    .create_new_plan_section_three {
+        margin-top: ($spacer * 5);
+    }
+
+    .create_new_plan_section_four {
+        margin-top: ($spacer * 5);
+    }
+}
+
+.myInsurance_create_new_plan_heading {
+    .links {
+        font-family: Roboto;
+    }
+}
+
+.myInsurance_create_new_plan_heading-2 p {
+    font-family: Roboto;
+}
+
+.myInsurance_create_new_plan_heading-2 span {
+    font-family: Roboto;
+}
+
+.myInsurance_create_new_plantitle {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    width: 100%;
+    height: 42px;
+    margin-bottom: 16px;
+    border-bottom: 1px solid #D5D7DA;
+
+    .plan-details-icon {
+        width: 20px;
+        height: 20px;
+        background-image: $plan-details-icon;
+        display: block;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+    }
+
+    p {
+        margin: 0px;
+        color: #000;
+        font-family: Space Grotesk;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        letter-spacing: -0.22px;
+    }
+
+    img {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+.content-sub-title-wrapper {
+    margin-top: 12px;
+
+    .content-sub-title {
+        margin-top: 20px;
+        border-radius: 8px;
+        background: var(--surface-default, #FFF);
+
+        h5 {
+            color: #202223;
+            font-feature-settings: 'clig' off, 'liga' off;
+            font-family: Roboto;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 20px;
+            /* 142.857% */
+        }
+    }
+
+    .content-sub-title-selection {
+        margin-top: 4px;
+
+        h5 {
+            color: #6D7175;
+            font-family: Roboto;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 20px;
+            /* 142.857% */
+        }
+    }
+
+    .travel-button {
+        margin-top: 16px;
+        width: 100%;
+        height: 24px;
+        align-items: center;
+        display: flex;
+
+        .form-switch {
+            width: 24px;
+            height: 14px;
+            flex-shrink: 0;
+            fill: #BCD8F1;
+            stroke-width: 1px;
+            stroke: #CCC;
+        }
+
+        .travel-button-text {
+            margin-left: 11px;
+
+            h5 {
+                color: rgba(0, 0, 0, 0.60);
+                font-family: Inter;
+                font-size: 14px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: 24px;
+                /* 171.429% */
+                letter-spacing: -0.154px;
+                margin-top: 7px;
+            }
+        }
+    }
+
+    .content-co-insurer-wrapper {
+        width: 100%;
+        margin-top: 20px;
+        height: 170px;
+
+        .content-co-insurer-content {
+            margin-top: 20px;
+
+            h5 {
+                color: #202223;
+                font-feature-settings: 'clig' off, 'liga' off;
+                font-family: Roboto;
+                font-size: 14px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 20px;
+                /* 142.857% */
+            }
+
+        }
+
+        .content-co-insurer-content :nth-child(2) {
+            color: #6D7175;
+            font-family: Roboto;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 20px;
+            /* 142.857% */
+        }
+
+        .content-co-insurer-user-search {
+            margin-top: 16px;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 8px;
+            border: 1px solid rgba(0, 0, 0, 0.20);
+            background: #FFF;
+
+            .input-group {
+                flex-basis: 80%;
+                width: 100%;
+                display: flex;
+                align-items: center;
+                margin-right: 10px;
+            }
+
+            .more_filters {
+                flex-basis: 20%;
+                width: 100%;
+                display: flex;
+                align-items: center;
+            }
+
+        }
+
+        .divider-co-insurer {
+            width: 100%;
+            height: 16px;
+            border-bottom: 1px solid #EEE;
+            margin-top: 16px 0px;
+
+        }
+
+        .content-co-insurer-company {
+            margin-top: 16px 0px 20px 0px;
+            height: 36px;
+            width: 100%;
+        }
+
+    }
+}
+
+.create_new_plan_section_two {
+    margin-top: 30px;
+
+    .select-countrylist {
+        margin-top: 20px;
+        width: 50%;
+
+        .select-countrylist-title {
+            h6 {
+                color: #202223;
+                font-family: Inter;
+                font-size: 14px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 24px;
+                /* 171.429% */
+                letter-spacing: -0.154px;
+            }
+        }
+
+        .select-countrylist-search-details {
+            h6 {
+                color: #6D7175;
+                font-family: Roboto;
+                font-size: 14px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 20px;
+                /* 142.857% */
+            }
+        }
+    }
+}
+
+.create_new_plan_section_three {
+    width: 100%;
+    border-radius: 8px;
+    background: var(--surface-default, #FFF);
+
+    .age_range_title,
+    .policy_types_title,
+    .travel_purposes_title {
+        margin-top: 20px;
+
+        .form-check {
+            margin-bottom: 5px;
+        }
+    }
+}
+
+.create_new_plan_section_four {
+    width: 100%;
+    border-radius: 8px;
+    background: var(--surface-default, #FFF);
+
+    .section_four_heading {
+        color: #202223;
+        font-family: Inter;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 24px;
+        /* 171.429% */
+        letter-spacing: -0.154px;
+
+        span {
+            color: #6D7175;
+            font-family: Roboto;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 20px;
+            /* 142.857% */
+        }
+    }
+
+    .button-add-package {
+        display: flex;
+        padding: 4px 8px;
+        align-items: center;
+        gap: 8px;
+        border-radius: 8px;
+        border: 1px solid #CCC;
+
+        i {
+            margin-right: 5px;
+        }
+
+        button {
+            border: none;
+            background: none;
+        }
+    }
+
+    .membership-card-section {
+
+        margin-top: 16px;
+        border-radius: 8px;
+        // background: #FFF;
+        box-shadow: 0px 0px 1px 0px rgba(0, 0, 0, 0.25), 0px 2px 1px 0px rgba(0, 0, 0, 0.05);
+        flex-wrap: wrap;
+        display: flex;
+        gap: 20px;
+        justify-content: space-between;
+        padding: 0px 10px;
+
+        .basic-cards {
+            width: 30%;
+            border-radius: 8px;
+            background: #F7F7F7;
+            height: 351px;
+            margin: 16px 0px;
+            box-shadow: 0px 0px 1px 0px rgba(0, 0, 0, 0.25), 0px 2px 1px 0px rgba(0, 0, 0, 0.05);
+
+            .card-title {
+                display: flex;
+                padding-bottom: 0px;
+                justify-content: space-between;
+                align-items: center;
+                align-self: stretch;
+                padding: 0px 25px;
+
+                p {
+                    margin-top: 20px;
+                }
+
+                .icons {
+                    height: 16px;
+                    width: 16px;
+                    display: flex;
+                    gap: 4px;
+                }
+            }
+
+            .plan_Amount {
+                padding: 0px 25px;
+
+                p {
+                    color: #202223;
+                    font-family: Roboto;
+                    font-size: 12px;
+                    font-style: normal;
+                    font-weight: 400;
+                    margin: 0px;
+                    padding: 0px;
+                }
+
+                span {
+                    color: #202223;
+                    font-family: Roboto;
+                    font-size: 20px;
+                    font-style: normal;
+                    font-weight: 800;
+                    line-height: 28px;
+                    /* 140% */
+                    text-align: center;
+                    display: block;
+                }
+            }
+
+            .plan_includes {
+                display: flex;
+                flex-direction: column;
+                padding: 0px 25px;
+
+                span {
+                    display: flex;
+
+                    p {
+                        display: flex;
+                    }
+
+                    i {
+                        width: 20px;
+                        height: 20px;
+                        color: #4C9F59;
+                        margin-right: 5px;
+                    }
+                }
+            }
+        }
+    }
+}

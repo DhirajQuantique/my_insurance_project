@@ -8,7 +8,12 @@ import {PagesLayoutComponent} from './Layout/pages-layout/pages-layout.component
 // Dashboards
 
 import {AnalyticsComponent} from './DemoPages/Dashboards/analytics/analytics.component';
+<<<<<<< Updated upstream
 import { ManagePlansComponent } from './DemoPages/Dashboards/ManagePlans/manageplan.component';
+=======
+import { ManagePlansComponent } from './DemoPages/Dashboards/ManagePlans/manageplan/manageplan.component';
+import { CreateNewPlanComponent } from './DemoPages/Dashboards/CreateNewPlan/create-new-plan.component';
+>>>>>>> Stashed changes
 
 // Pages
 
@@ -67,7 +72,9 @@ const routes: Routes = [
       {path: 'manageplan',component:ManagePlansComponent},
       {path: 'aboutus',component:Aboutus},
       {path: 'services',component:ServicesPage},
-      {path: 'createplan',component:CreateNewPlanComponent},
+      { path: 'createplan', component: CreateNewPlanComponent },
+      { path: 'manageplan', component: ManagePlansComponent },
+       {path: 'createnewplan',component:CreateNewPlanComponent},
       // Elements
 
       {path: 'elements/buttons-standard', component: StandardComponent, data: {extraParameter: 'elementsMenu'}},

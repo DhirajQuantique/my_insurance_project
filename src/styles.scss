@@ -1,50 +1,61 @@
 @import "assets/base";
 @import '../src/assets/components/bootstrap5/variables';
 @import "~bootstrap-icons/font/bootstrap-icons.css";
-.header_custom{
+
+.header_custom {
     display: flex;
     flex-flow: column;
-    .header_custom_title{
+
+    .header_custom_title {
         display: flex;
     }
-    .header_custom_titles{
+
+    .header_custom_titles {
         display: flex;
         justify-content: space-between;
     }
 }
-app-base-layout{
-    .card{
+
+app-base-layout {
+    .card {
         border: 0px !important;
     }
-    
+
 }
-.header_custome{
+
+.header_custome {
     display: flex;
     justify-content: space-between;
-    .header_custom_title{
+
+    .header_custom_title {
         display: flex;
     }
-    .header_custom_titles{
+
+    .header_custom_titles {
         display: flex;
         justify-content: space-between;
     }
 }
-.more-button-option{
+
+.more-button-option {
     display: flex !important;
     margin: 0px 5px;
     align-items: center;
-    button{
-        &:after{
+
+    button {
+        &:after {
             display: none !important;
         }
     }
 }
-.benifit-total{
+
+.benifit-total {
     display: flex;
     flex-flow: column;
     margin-left: ($spacer * 1.5);
     width: auto;
-    .benifit-total-title{
+
+    .benifit-total-title {
         width: 100%;
         background: rgba(204, 204, 204, 1);
         padding: ($spacer * 1) ($spacer * 1);
@@ -54,7 +65,8 @@ app-base-layout{
         font-size: $font-size-base;
         display: flex;
         align-items: center;
-        .benifit-total-icon{
+
+        .benifit-total-icon {
             background: $benifit-total-icon;
             width: 20px;
             height: 20px;
@@ -63,34 +75,40 @@ app-base-layout{
             margin-right: ($spacer * 0.7);
             display: flex;
         }
-        .total-main{
+
+        .total-main {
             width: 100%;
             display: flex;
         }
-        
+
     }
-    .benifit-total-body{
+
+    .benifit-total-body {
         width: 100%;
         padding: ($spacer * 1);
         background: rgba(0, 0, 0, 0.05);
         margin-top: 4px;
-        .benifit-total-body-section{
+
+        .benifit-total-body-section {
             gap: 10px;
             display: flex;
             flex-flow: column;
-            .benifit-total-row{
+
+            .benifit-total-row {
                 display: flex;
                 align-items: center;
                 justify-content: space-between;
                 gap: 20px;
-                span{
+
+                span {
                     font-size: $small-font-size;
                     text-transform: uppercase;
                     width: 100%;
                     display: flex;
                     flex-flow: nowrap;
                     white-space: nowrap;
-                    &:last-child{
+
+                    &:last-child {
                         font-weight: $font-weight-bold;
                         align-items: center;
                         display: flex;
@@ -99,16 +117,19 @@ app-base-layout{
                 }
             }
         }
-        .total-estimate{
+
+        .total-estimate {
             padding: ($spacer * 0.5);
             border-radius: 8px;
             background-color: #fff;
             margin-top: ($spacer * 1);
-            span{
-                &.rupees-icon{
+
+            span {
+                &.rupees-icon {
                     @include rupees-icon;
                 }
-                &:last-child{
+
+                &:last-child {
                     font-size: ($spacer * 1.5);
                     font-weight: $font-weight-bold;
                     display: flex;
@@ -117,12 +138,14 @@ app-base-layout{
             }
         }
     }
-    @media only screen and (min-width: 320px) and (max-width: 800px)  {
+
+    @media only screen and (min-width: 320px) and (max-width: 800px) {
         margin: 0px !important;
         width: 100%;
     }
 }
-.analytics_icon{
+
+.analytics_icon {
     background-repeat: no-repeat;
     background-image: $analytics-overview-icon;
     background-size: contain;
@@ -130,7 +153,8 @@ app-base-layout{
     width: 24px;
     height: 24px;
 }
-.data_analytics_icon{
+
+.data_analytics_icon {
     background-repeat: no-repeat;
     background-image: $data-analysis-icon;
     background-size: contain;
@@ -138,7 +162,8 @@ app-base-layout{
     width: 24px;
     height: 24px;
 }
-.activities-icon{
+
+.activities-icon {
     background-repeat: no-repeat;
     background-image: $activities-icon;
     background-size: contain;
@@ -146,7 +171,8 @@ app-base-layout{
     width: 20px;
     height: 24px;
 }
-.quantique-logo-footer{
+
+.quantique-logo-footer {
     background-repeat: no-repeat;
     background-image: $qiantiqie-logo;
     background-size: 100%;
@@ -155,16 +181,18 @@ app-base-layout{
     height: 59px;
     background-position: center;
 }
-.facebook-icon{
+
+.facebook-icon {
     background-repeat: no-repeat;
-    background-image:$facebook-icon;
+    background-image: $facebook-icon;
     background-size: 100%;
     display: flex;
     width: 20px;
     height: 20px;
     background-position: center;
 }
-.youtube-icon{
+
+.youtube-icon {
     background-repeat: no-repeat;
     background-image: $youtube-icon;
     background-size: 100%;
@@ -173,16 +201,18 @@ app-base-layout{
     height: 20px;
     background-position: center;
 }
-.insta-icon{
+
+.insta-icon {
     background-repeat: no-repeat;
-    background-image:$insta-icon;
+    background-image: $insta-icon;
     background-size: 100%;
     display: flex;
     width: 20px;
     height: 20px;
     background-position: center;
 }
-.email-icon{
+
+.email-icon {
     background-repeat: no-repeat;
     background-image: $email-icon;
     background-size: 100%;
@@ -191,56 +221,67 @@ app-base-layout{
     height: 20px;
     background-position: center;
 }
-.table-chart-responsive{
+
+.table-chart-responsive {
     align-items: center;
     justify-content: space-between;
     overflow: hidden;
-    .dashboard-chart-section{
+
+    .dashboard-chart-section {
         width: 100%;
         display: flex;
         flex-flow: column;
-        .dashboard-chart-block{
+
+        .dashboard-chart-block {
             width: 100%;
             display: flex !important;
-            .table-chart-main{
+
+            .table-chart-main {
                 display: flex;
             }
-            @media only screen and (min-width: 320px) and (max-width: 800px)  {
+
+            @media only screen and (min-width: 320px) and (max-width: 800px) {
                 flex-flow: column !important;
             }
         }
     }
-    @media only screen and (min-width: 320px) and (max-width: 800px)  {
+
+    @media only screen and (min-width: 320px) and (max-width: 800px) {
         flex-flow: column !important;
     }
 }
-.tab-pane{
-    .dashboard-main-page{
+
+.tab-pane {
+    .dashboard-main-page {
         display: flex;
         flex-flow: row;
-        
-        .card-header-tab.card-header{
+
+        .card-header-tab.card-header {
             align-items: center;
             justify-content: space-between;
             padding: 0px 0px 10px 0px !important;
-            .card-header-title{
-                .building-icon-dashboard{
+
+            .card-header-title {
+                .building-icon-dashboard {
                     margin-right: 10px;
                 }
             }
-            .dashboard-filter-section{
-                .pagination-dropdown-filter{
-                    .pagination{
+
+            .dashboard-filter-section {
+                .pagination-dropdown-filter {
+                    .pagination {
                         margin: 0px !important;
                     }
                 }
-                .pagination-step-show-from{
+
+                .pagination-step-show-from {
                     background: rgba(0, 0, 0, 0.05);
                     border-radius: 5px;
                     display: flex;
                     align-items: center;
                     height: 100%;
-                    select{
+
+                    select {
                         background-color: transparent;
                         border: 0;
                         padding: 0.185rem 2.25rem 0.185rem 0.75rem !important;
@@ -248,210 +289,267 @@ app-base-layout{
                 }
             }
         }
-        @media only screen and (min-width: 320px) and (max-width: 900px)  {
+
+        @media only screen and (min-width: 320px) and (max-width: 900px) {
             flex-flow: column !important;
         }
-        @media only screen and (min-width: 601px) and (max-width: 900px)  {
+
+        @media only screen and (min-width: 601px) and (max-width: 900px) {
             flex-flow: column !important;
         }
     }
-    .dashboard-main-page-table{
+
+    .dashboard-main-page-table {
         width: 100%;
-        .dashboard-main-table{
+
+        .dashboard-main-table {
             border-radius: 8px;
-            overflow:auto;
+            overflow: auto;
             background-color: rgba(0, 0, 0, 0.05) !important;
-            table.table.table-striped{
+
+            table.table.table-striped {
                 th {
                     background-color: rgba(0, 0, 0, 0.2);
                     border-bottom-width: 0px !important;
                     border-right: 2px solid #fff;
-                    &:last-child{
+
+                    &:last-child {
                         border-right: 0px !important;
                     }
                 }
-                tbody > tr:nth-of-type(odd) {
+
+                tbody>tr:nth-of-type(odd) {
                     --bs-table-accent-bg: none !important;
                 }
+
                 td {
                     padding: 0.5rem 0.5rem;
                     background-color: transparent !important;
                     border-bottom-width: 0px !important;
                     box-shadow: none !important;
                     border-right: 2px solid #fff;
-                    &:last-child{
+
+                    &:last-child {
                         border-right: 0px !important;
                     }
                 }
+
                 margin-bottom: 0rem !important;
             }
         }
     }
 }
-.table-header-section{
-    .pagination-step-show-from{
+
+.table-header-section {
+    .pagination-step-show-from {
         display: flex;
     }
 }
-.building-icon-dashboard{
+
+.building-icon-dashboard {
     width: 24px;
     height: 24px;
     display: $d-flex;
     background-image: $building-icon-dashboard;
 }
-.overview-tab-true,.account-tab-true,.setting-tab-true{
+
+.overview-tab-true,
+.account-tab-true,
+.setting-tab-true {
     display: flex;
     border-bottom: 4px solid $tab-active;
 }
-.m-0{
+
+.m-0 {
     margin: 0 !important;
 }
-.ml-5{
+
+.ml-5 {
     margin-left: 5px !important;
 }
-.mr-5{
+
+.mr-5 {
     margin-right: 5px !important;
 }
-.mt-5{
+
+.mt-5 {
     margin-top: 5px !important;
 }
-.mb-5{
+
+.mb-5 {
     margin-bottom: 5px !important;
 }
 
-.ml-10{
+.ml-10 {
     margin-left: 10px !important;
 }
-.mr-10{
+
+.mr-10 {
     margin-right: 10px !important;
 }
-.mt-10{
+
+.mt-10 {
     margin-top: 10px !important;
 }
-.mb-10{
+
+.mb-10 {
     margin-bottom: 10px !important;
 }
 
-.ml-15{
+.ml-15 {
     margin-left: 15px !important;
 }
-.mr-15{
+
+.mr-15 {
     margin-right: 15px !important;
 }
-.mt-15{
+
+.mt-15 {
     margin-top: 15px !important;
 }
-.mb-15{
+
+.mb-15 {
     margin-bottom: 15px !important;
 }
 
-.ml-20{
+.ml-20 {
     margin-left: 20px !important;
 }
-.mr-15{
+
+.mr-15 {
     margin-right: 20px !important;
 }
-.mt-15{
+
+.mt-15 {
     margin-top: 20px !important;
 }
-.mb-15{
+
+.mb-15 {
     margin-bottom: 20px !important;
 }
-.p-0{
+
+.p-0 {
     padding: 0 !important;
 }
-.pl-5{
+
+.pl-5 {
     padding-left: 5px !important;
 }
-.pr-5{
+
+.pr-5 {
     padding-right: 5px !important;
 }
-.pt-5{
+
+.pt-5 {
     padding-top: 5px !important;
 }
-.pb-5{
+
+.pb-5 {
     padding-bottom: 5px !important;
 }
 
-.pl-10{
+.pl-10 {
     padding-left: 10px !important;
 }
-.pr-10{
+
+.pr-10 {
     padding-right: 10px !important;
 }
-.pt-10{
+
+.pt-10 {
     padding-top: 10px !important;
 }
-.pb-10{
+
+.pb-10 {
     padding-bottom: 10px !important;
 }
 
-.pl-15{
+.pl-15 {
     padding-left: 15px !important;
 }
-.pr-15{
+
+.pr-15 {
     padding-right: 15px !important;
 }
-.pt-15{
+
+.pt-15 {
     padding-top: 15px !important;
 }
-.pb-15{
+
+.pb-15 {
     padding-bottom: 15px !important;
 }
 
-.pl-20{
+.pl-20 {
     padding-left: 20px !important;
 }
-.pr-15{
+
+.pr-15 {
     padding-right: 20px !important;
 }
-.pt-15{
+
+.pt-15 {
     padding-top: 20px !important;
 }
-.pb-15{
+
+.pb-15 {
     padding-bottom: 20px !important;
 }
-.gap-0{
+
+.gap-0 {
     gap: 0 !important;
 }
-.gap-10{
+
+.gap-10 {
     gap: 10px !important;
 }
-.gap-15{
+
+.gap-15 {
     gap: 15px !important;
 }
-.gap-20{
+
+.gap-20 {
     gap: 20px !important;
 }
-.gap-25{
+
+.gap-25 {
     gap: 25px !important;
 }
-.gap-30{
+
+.gap-30 {
     gap: 30px !important;
 }
-.w-100{
+
+.w-100 {
     width: 100% !important;
 }
-.align-item-center{
+
+.align-item-center {
     align-items: center;
 }
-.align-items-baseline{
+
+.align-items-baseline {
     align-items: baseline;
 }
-.justify-content-center{
+
+.justify-content-center {
     justify-content: center;
 }
-.flex-flow-column{
+
+.flex-flow-column {
     flex-flow: column;
 }
-.justify-content-space-center{
-    justify-content:center;
+
+.justify-content-space-center {
+    justify-content: center;
 }
-.justify-content-space-between{
+
+.justify-content-space-between {
     justify-content: space-between;
 }
-app-regular{
-    @media only screen and (min-width: 320px) and (max-width: 900px)  {
+
+app-regular {
+    @media only screen and (min-width: 320px) and (max-width: 900px) {
         overflow: hidden !important;
-    } 
+    }
 }

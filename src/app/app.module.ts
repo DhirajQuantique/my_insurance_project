@@ -46,10 +46,9 @@ import {FooterComponent} from './Layout/Components/footer/footer.component';
 // Dashboards
 
 import {AnalyticsComponent} from './DemoPages/Dashboards/analytics/analytics.component';
-import { ManagePlansComponent } from './DemoPages/Dashboards/ManagePlans/manageplan.component';
+import { ManagePlansComponent } from './DemoPages/Dashboards/ManagePlans/manageplan/manageplan.component';
+import { CreateNewPlanComponent } from './DemoPages/Dashboards/CreateNewPlan/create-new-plan.component';
 import { Aboutus } from './DemoPages/Dashboards/Aboutus/aboutus.component';
-
-// Pages
 
 import {ForgotPasswordBoxedComponent} from './DemoPages/UserPages/forgot-password-boxed/forgot-password-boxed.component';
 import {LoginBoxedComponent} from './DemoPages/UserPages/login-boxed/login-boxed.component';
@@ -147,6 +146,7 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
     ForgotPasswordBoxedComponent,
     LoginBoxedComponent,
     RegisterBoxedComponent,
+    CreateNewPlanComponent,
 
     // Elements
 
@@ -204,6 +204,7 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
     NgReduxModule,
     CommonModule,
     LoadingBarRouterModule,
+    
 
     // Angular Bootstrap Components
 

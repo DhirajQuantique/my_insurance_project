@@ -1,0 +1,369 @@
+<div class="container-fluid">
+    <div class="row mb-10">
+        <div class="col-md-12 myInsurance_create_new_plan_heading">
+            <!-- <p>Manage Plans > <strong>Create New Plan</strong></p> -->
+            <div class="links">
+                <span class="about-mute"><a class="ManagePlans" href="ManagePlans">Manage Plans</a><span> <strong>>
+                            Create New Plan</strong></span></span>
+            </div>
+        </div>
+
+    </div>
+    <div class="create-plan-wrapper">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 myInsurance_create_new_plan_heading-2">
+                    <p><b>Create New Plan</b></p>
+                    <span>To create product plan that prioritizes accessibility by providing comprehensive coverage that
+                        meets user’s unique
+                        needs, </span>
+                    <span> define and configure the product first.</span>
+                </div>
+            </div>
+        </div>
+        <section class="create_new_plan_section_one">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="myInsurance_create_new_plantitle">
+                        <span class="plan-details-icon"></span>
+                        <p><b> Plan Details</b> </p>
+                    </div>
+                    <div class="col-md-12 col-sm-12 content-sub-title-wrapper">
+                        <div class="content-sub-title">
+                            <h5>Select Product and Sub-Products</h5>
+                        </div>
+                        <div class="content-sub-title-selection">
+                            <h5>Below are the available product, choose or multi-select the suitable based on
+                                requirement.</h5>
+                        </div>
+                        <div class="travel-button">
+                            <div class="form-check form-switch">
+                                <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
+                            </div>
+                            <div class="travel-button-text">
+                                <h5>Travel</h5>
+                            </div>
+
+                        </div>
+                        <div class="col-md-12 col-sm-12 content-co-insurer-wrapper">
+                            <div class="content-co-insurer-content">
+                                <h5>
+                                    Add co-insurer company(s) and assign them percentage respectively.
+                                </h5>
+                                <h5>
+                                    Search or choose from the dropdown, multi-select the suitable based on requirement.
+                                </h5>
+                            </div>
+
+                            <div class="content-co-insurer-user-search">
+
+                                <div class="input-group border">
+                                    <button
+                                        class="btn bg-white border-start-0 border-bottom-0 border-right-0 border-top-0 ms-n5"
+                                        type="button">
+                                        <i class="fa fa-search"></i>
+                                    </button>
+                                    <input
+                                        class="form-control border-end-0 border-start-0 border-bottom-0 border-right-0 border-top-0"
+                                        type="search" value="search" id="example-search-input">
+
+                                </div>
+                                <div class="more_filters border">
+                                    <button
+                                        class="btn bg-white border-start-0 border-bottom-0 border-right-0 border-top-0 ms-n5"
+                                        type="button">
+                                        <i class="bi bi-filter"></i>
+                                    </button>
+                                    <input
+                                        class="form-control border-start-0 border-bottom-0 border-right-0 border-top-0"
+                                        type="search" value="More Filters" id="example-search-input">
+
+                                </div>
+                            </div>
+
+                            <div class="divider-co-insurer "></div>
+
+
+
+                            <div class="content-co-insurer-company">
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+
+                                            <th scope="col">Sr. No.</th>
+                                            <th scope="col" style="width: 80%;">Co-insurer company</th>
+                                            <th scope="col">Percentage</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <th scope="row">1</th>
+                                            <td>Mark</td>
+                                            <td>Otto</td>
+
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">2</th>
+                                            <td>Jacob</td>
+                                            <td>Thornton</td>
+
+                                        </tr>
+
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section class="create_new_plan_section_two">
+            <div class="select-countrylist">
+                <div class="select-countrylist-title">
+                    <h6>Select country(s)</h6>
+                </div>
+                <div class="select-countrylist-search-details">
+                    <h6>Search or choose from the dropdown, multi-select the suitable based on requirement.</h6>
+                </div>
+                <select class="form-select" aria-label="Default select example">
+                    <option selected>Type here</option>
+                    <option value="1">India</option>
+                    <option value="2">Singapur</option>
+                    <option value="3">Dubai</option>
+                </select>
+            </div>
+
+
+
+
+            <div class="select-countrylist">
+                <div class="select-countrylist-title">
+                    <h6>Select language(s)</h6>
+                </div>
+
+                <div class="select-countrylist-search-details">
+                    <h6>Search or choose from the dropdown, multi-select the suitable based on requirement.</h6>
+                </div>
+
+                <select class="form-select" [(ngModel)]="selectedLanguage">
+                    <option *ngFor="let item of items" [ngValue]="item.name">{{ item.name }}</option>
+                </select>
+
+                <div *ngFor="let item of getSelectedLanguageItems()" class="language-item">
+                    <label>
+                        <input type="checkbox" [(ngModel)]="item.checked" [name]="item.name" /> {{ item.name }}
+                    </label>
+                </div>
+            </div>
+
+
+
+            <div class="select-countrylist">
+                <div class="select-countrylist-title">
+                    <h6>Number of trip(s) permitted</h6>
+                </div>
+                <div class="select-countrylist-search-details">
+                    <h6>Search or choose from the dropdown, multi-select the suitable based on requirement.</h6>
+                </div>
+                <select class="form-select" aria-label="Default select example">
+                    <option selected>Type here</option>
+                    <option value="1">One</option>
+                    <option value="2">Two</option>
+                    <option value="3">Three</option>
+                </select>
+
+            </div>
+        </section>
+        <section class="create_new_plan_section_three">
+            <div class="age_range_title">
+                <h6>Select age range(s)</h6>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                    <label class="form-check-label" for="flexCheckDefault">
+                        Less than 1 year
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                    <label class="form-check-label" for="flexCheckDefault">
+                        Below 18 years
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                    <label class="form-check-label" for="flexCheckDefault">
+                        Between 18-60 years
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                    <label class="form-check-label" for="flexCheckDefault">
+                        Above 60 years
+                    </label>
+                </div>
+            </div>
+
+            <div class="policy_types_title">
+                <h6>Choose policy types</h6>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                    <label class="form-check-label" for="flexCheckDefault">
+                        Individual
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                    <label class="form-check-label" for="flexCheckDefault">
+                        Agency
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                    <label class="form-check-label" for="flexCheckDefault">
+                        Sponsor
+                    </label>
+                </div>
+
+            </div>
+
+            <div class="travel_purposes_title">
+                <h6>Choose travel purposes</h6>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                    <label class="form-check-label" for="flexCheckDefault">
+                        Student
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                    <label class="form-check-label" for="flexCheckDefault">
+                        Business
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                    <label class="form-check-label" for="flexCheckDefault">
+                        Leisure
+                    </label>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="create_new_plan_section_four">
+            <div class="row">
+                <div class="col-md-10">
+                    <div class="section_four_heading">
+                        <p>Select or edit the package according to your preferences</p>
+                        <span>Below are the editable packages, where you can change number of days, coverages and other
+                            data.</span>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="button-add-package">
+                        <button><i class="bi bi-plus"></i>Add Package</button>
+                    </div>
+                </div>
+            </div>
+            <div class="membership-card-section">
+                <div class="basic-cards">
+                    <div class="card-title">
+                        <p>BASIC</p>
+                        <div class="icons">
+                            <i class="bi bi-pencil"></i>
+                            <i class="bi bi-trash"></i>
+                        </div>
+                    </div>
+                    <div class="plan_Amount">
+                        <p>Plan Amount :</p>
+                        <span>100 KWD</span>
+                    </div>
+                    <div class="plan_includes">
+                        <p>Plan Includes :</p>
+                        <span><i class="bi bi-check2"></i>
+                            <p>Plan Duration : <span>15 Days</span> </p>
+                        </span>
+                        <span><i class="bi bi-check2"></i>
+                            <p>Coverage : <span>1,000 KWD</span> </p>
+                        </span>
+                        <span><i class="bi bi-check2"></i>
+                            <p>Tax Percentage : <span>25%</span> </p>
+                        </span>
+                        <span><i class="bi bi-check2"></i>
+                            <p>GP : <span>300 KWD</span> </p>
+                        </span>
+                        <span><i class="bi bi-check2"></i>
+                            <p>SI : <span>700 KWD</span> </p>
+                        </span>
+                    </div>
+                </div>
+
+                <div class="basic-cards">
+                    <div class="card-title">
+                        <p>GOLD</p>
+                        <div class="icons">
+                            <i class="bi bi-pencil"></i>
+                            <i class="bi bi-trash"></i>
+                        </div>
+                    </div>
+                    <div class="plan_Amount">
+                        <p>Plan Amount :</p>
+                        <span>500 KWD</span>
+                    </div>
+                    <div class="plan_includes">
+                        <p>Plan Includes :</p>
+                        <span><i class="bi bi-check2"></i>
+                            <p>Plan Duration : <span>30 Days</span> </p>
+                        </span>
+                        <span><i class="bi bi-check2"></i>
+                            <p>Coverage : <span>5,000 KWD</span> </p>
+                        </span>
+                        <span><i class="bi bi-check2"></i>
+                            <p>Tax Percentage : <span>15%</span> </p>
+                        </span>
+                        <span><i class="bi bi-check2"></i>
+                            <p>GP : <span>1800 KWD</span> </p>
+                        </span>
+                        <span><i class="bi bi-check2"></i>
+                            <p>SI : <span>3200 KWD</span> </p>
+                        </span>
+                    </div>
+                </div>
+
+                <div class="basic-cards">
+                    <div class="card-title">
+                        <p>SILVER</p>
+                        <div class="icons">
+                            <i class="bi bi-pencil"></i>
+                            <i class="bi bi-trash"></i>
+                        </div>
+                    </div>
+                    <div class="plan_Amount">
+                        <p>Plan Amount :</p>
+                        <span>1000 KWD</span>
+                    </div>
+                    <div class="plan_includes">
+                        <p>Plan Includes :</p>
+                        <span><i class="bi bi-check2"></i>
+                            <p>Plan Duration : <span>60 Days</span> </p>
+                        </span>
+                        <span><i class="bi bi-check2"></i>
+                            <p>Coverage : <span>10,000 KWD</span> </p>
+                        </span>
+                        <span><i class="bi bi-check2"></i>
+                            <p>Tax Percentage : <span>10%</span> </p>
+                        </span>
+                        <span><i class="bi bi-check2"></i>
+                            <p>GP : <span>2,700 KWD</span> </p>
+                        </span>
+                        <span><i class="bi bi-check2"></i>
+                            <p>SI : <span>7,300 KWD</span> </p>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</div>
