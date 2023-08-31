@@ -18,8 +18,7 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import {PerfectScrollbarModule} from 'ngx-perfect-scrollbar';
 import {PERFECT_SCROLLBAR_CONFIG} from 'ngx-perfect-scrollbar';
 import {PerfectScrollbarConfigInterface} from 'ngx-perfect-scrollbar';
-import { ChartsModule } from 'ng2-charts';
-
+import {ChartsModule} from 'ng2-charts';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 // LAYOUT
@@ -47,8 +46,8 @@ import {FooterComponent} from './Layout/Components/footer/footer.component';
 // Dashboards
 
 import {AnalyticsComponent} from './DemoPages/Dashboards/analytics/analytics.component';
-import { ManagePlansComponent } from './DemoPages/Dashboards/ManagePlans/manageplan.component';
-// Pages
+import { CreateNewPlanComponent } from './DemoPages/Dashboards/CreateNewPlan/create-new-plan.component';
+import { Aboutus } from './DemoPages/Dashboards/Aboutus/aboutus.component';
 
 import {ForgotPasswordBoxedComponent} from './DemoPages/UserPages/forgot-password-boxed/forgot-password-boxed.component';
 import {LoginBoxedComponent} from './DemoPages/UserPages/login-boxed/login-boxed.component';
@@ -102,6 +101,9 @@ import {DynamicChartComponent} from './DemoPages/Charts/chartjs/examples/dynamic
 import {DoughnutChartComponent} from './DemoPages/Charts/chartjs/examples/doughnut-chart/doughnut-chart.component';
 import {PieChartComponent} from './DemoPages/Charts/chartjs/examples/pie-chart/pie-chart.component';
 import { MainMenuComponent } from './Layout/Components/header/elements/main-menu/main-menu';
+import { CustomFilterPipe } from './custompipes/searchfilter.pipe';
+import { ServicesPage } from './DemoPages/Dashboards/Services/services.component';
+import { ManagePlansComponent } from './DemoPages/Dashboards/ManagePlans/manageplan.component';
 
 const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
   suppressScrollX: true
@@ -116,7 +118,7 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
     BaseLayoutComponent,
     PagesLayoutComponent,
     PageTitleComponent,
-
+    CustomFilterPipe,
     // HEADER
 
     HeaderComponent,
@@ -138,10 +140,12 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
     // Dashboards
 
     AnalyticsComponent,
-    ManagePlansComponent,
+    Aboutus,
+    ServicesPage,
     ForgotPasswordBoxedComponent,
     LoginBoxedComponent,
     RegisterBoxedComponent,
+    CreateNewPlanComponent,
 
     // Elements
 
@@ -199,6 +203,7 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
     NgReduxModule,
     CommonModule,
     LoadingBarRouterModule,
+    
 
     // Angular Bootstrap Components
 

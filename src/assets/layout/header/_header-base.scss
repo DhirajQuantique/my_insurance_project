@@ -38,38 +38,84 @@
         gap:$gap-20;
         margin: 0;
         padding: 0px 20px;
+        li{
+          list-style: none !important;
+          display: flex;
+          align-items: center;
+          text-wrap: nowrap;
+        }
         .meain-menu-dash{
           display: flex;
+          padding: 0;
+          color: #033C73 !important;
+          background: none !important;
+          &:hover{
+            background: none !important;
+            text-decoration: underline !important;
+          }
         }
         .submenu {
           transition: 300ms ease-in-out;
-          height: 0;
-          visibility: hidden;
           position: absolute;
-          &.expanded {
-            padding: 0;
-            height: auto;
-            padding: 10px 10px;
-            visibility:visible !important;
-            top: 100%;
-            background-color: $white;
-            li{
-              list-style: none;
-              a{
-                padding: 10px 0px !important;
+          padding: 0;
+          padding: 10px 10px;
+          top: 70%;
+          background-color: $dropdown-menu-bg;
+          li{
+            list-style: none;
+            padding: 10px 10px !important;
+            &:focus,&:hover {
+              color: #1e2125;
+              background-color: #d1f3ff;
+              background-image: var(--bs-gradient);
+            }
+            a{
+              padding: 0;
+              &:focus,&:hover {
+                color: #1e2125;
+                background-color: transparent !important;
+                background-image: none !important;
+              }
+            }
+          }
+        }
+        .secondsubmenu{
+          transition: 300ms ease-in-out;
+          display: none;
+          position: absolute;
+          padding: 0;
+          padding: 10px 10px;
+          left: 100%;
+          top: 50%;
+          background-color: $dropdown-menu-bg;
+          li{
+            list-style: none;
+            padding: 10px 10px !important;
+            &:focus,&:hover {
+              color: #1e2125;
+              background-color: #d1f3ff;
+              background-image: var(--bs-gradient);
+            }
+            a{
+              &:focus,&:hover {
+                color: #1e2125;
+                background-color: transparent !important;
+                background-image: none !important;
               }
             }
           }
         }
         .dropdown-menu{
-          position: relative;
           box-shadow: none;
           border: 0;
           padding: 0;
-          display: flex;
+          display: none;
           width: auto;
           margin: 0;
           min-width: auto;
+          &::after{
+            display: none !important;
+          }
         }
         @media only screen and (min-width: 320px) and (max-width: 900px)  {
           flex-flow: column !important;

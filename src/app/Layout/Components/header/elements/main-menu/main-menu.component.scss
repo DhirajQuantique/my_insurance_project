@@ -1,0 +1,22 @@
+.dropdown-item{
+    &:hover{
+        .submenu{
+            display: flex !important;
+            flex-flow: column;
+        }
+    }
+}
+.dropdown-item-li{
+    &:hover{
+        .dropdown-toggle{
+            display: flex !important;
+            visibility: visible !important;
+            height: auto;
+            flex-flow: column;
+            &:hover{
+                display: flex !important;
+            }
+    
+        }
+    }
+}

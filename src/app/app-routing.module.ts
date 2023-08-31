@@ -8,8 +8,6 @@ import {PagesLayoutComponent} from './Layout/pages-layout/pages-layout.component
 // Dashboards
 
 import {AnalyticsComponent} from './DemoPages/Dashboards/analytics/analytics.component';
-import { ManagePlansComponent } from './DemoPages/Dashboards/ManagePlans/manageplan.component';
-
 // Pages
 
 import {ForgotPasswordBoxedComponent} from './DemoPages/UserPages/forgot-password-boxed/forgot-password-boxed.component';
@@ -51,9 +49,11 @@ import {LayoutComponent} from './DemoPages/Forms/Elements/layout/layout.componen
 // Charts
 
 import {ChartjsComponent} from './DemoPages/Charts/chartjs/chartjs.component';
-import { CreateNewPlanComponent } from './DemoPages/Dashboards/analytics/CreateNewPlan/create-new-plan.component';
+
 import { Aboutus } from './DemoPages/Dashboards/Aboutus/aboutus.component';
 import { ServicesPage } from './DemoPages/Dashboards/Services/services.component';
+import { ManagePlansComponent } from './DemoPages/Dashboards/ManagePlans/manageplan.component';
+import { CreateNewPlanComponent } from './DemoPages/Dashboards/CreateNewPlan/create-new-plan.component';
 
 const routes: Routes = [
   {
@@ -64,14 +64,11 @@ const routes: Routes = [
       // Dashboads
 
       {path: '', component: AnalyticsComponent, data: {extraParameter: 'dashboardsMenu'}},
-<<<<<<< HEAD
-      { path: 'manageplan', component: ManagePlansComponent },
-      {path: 'createnewplan',component:CreateNewPlanComponent},
-=======
       {path: 'manageplan',component:ManagePlansComponent},
       {path: 'aboutus',component:Aboutus},
       {path: 'services',component:ServicesPage},
->>>>>>> 9be5eb258b87f80a1ec4d562ba83c96b8cc778c1
+      { path: 'createplan', component: CreateNewPlanComponent },
+      { path: 'manageplan', component: ManagePlansComponent },
       // Elements
 
       {path: 'elements/buttons-standard', component: StandardComponent, data: {extraParameter: 'elementsMenu'}},

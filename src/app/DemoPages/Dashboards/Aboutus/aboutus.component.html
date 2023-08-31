@@ -1,1 +1,13 @@
-
+<div class="dropdown" >dropdown</div>
+<div class="dropdown-filter">
+        <div class="search-hero">
+          <input [(ngModel)]="searchText">
+        </div>
+      <ul >
+        <li *ngFor="let hero of heroes | customFilter:searchText">
+          <span>{{hero.id}}</span>
+          <span>{{hero.name}}</span>
+          <span>{{hero.country}}</span>
+        </li>
+      </ul>
+</div>
