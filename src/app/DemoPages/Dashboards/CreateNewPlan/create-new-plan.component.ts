@@ -37,7 +37,16 @@ export class CreateNewPlanComponent implements OnInit {
  getSelectedLanguageItems(): any[] {
     return this.items.filter(item => item.name === this.selectedLanguage);
   }
-   
+  
+  uploadFile() {
+    // Implement your file upload logic here
+    const fileInput = document.getElementById('fileInput') as HTMLInputElement;
+    const file = fileInput.files[0];
+    if (file) {
+      // You can now work with the selected file, e.g., upload it to a server
+      console.log('Uploading file:', file.name);
+    }
+  }
  
   
 }

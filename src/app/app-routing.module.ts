@@ -49,10 +49,11 @@ import {LayoutComponent} from './DemoPages/Forms/Elements/layout/layout.componen
 // Charts
 
 import {ChartjsComponent} from './DemoPages/Charts/chartjs/chartjs.component';
-import { CreateNewPlanComponent } from './DemoPages/Dashboards/analytics/CreateNewPlan/create-new-plan.component';
+
 import { Aboutus } from './DemoPages/Dashboards/Aboutus/aboutus.component';
 import { ServicesPage } from './DemoPages/Dashboards/Services/services.component';
 import { ManagePlansComponent } from './DemoPages/Dashboards/ManagePlans/manageplan.component';
+import { CreateNewPlanComponent } from './DemoPages/Dashboards/CreateNewPlan/create-new-plan.component';
 
 const routes: Routes = [
   {
@@ -68,7 +69,6 @@ const routes: Routes = [
       {path: 'services',component:ServicesPage},
       { path: 'createplan', component: CreateNewPlanComponent },
       { path: 'manageplan', component: ManagePlansComponent },
-       {path: 'createnewplan',component:CreateNewPlanComponent},
       // Elements
 
       {path: 'elements/buttons-standard', component: StandardComponent, data: {extraParameter: 'elementsMenu'}},

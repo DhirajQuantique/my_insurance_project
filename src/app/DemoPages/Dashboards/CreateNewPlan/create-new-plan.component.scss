@@ -27,6 +27,10 @@
     .create_new_plan_section_four {
         margin-top: ($spacer * 5);
     }
+
+    .create_new_plan_section_five {
+        margin-top: ($spacer * 5);
+    }
 }
 
 .myInsurance_create_new_plan_heading {
@@ -403,4 +407,16 @@
             }
         }
     }
+}
+
+.create_new_plan_section_five {
+    width: 100%;
+    border-radius: 8px;
+    background: var(--surface-default, #FFF);
+
+
+
+
+
+
 }
