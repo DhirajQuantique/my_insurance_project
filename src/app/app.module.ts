@@ -103,6 +103,7 @@ import {PieChartComponent} from './DemoPages/Charts/chartjs/examples/pie-chart/p
 import { MainMenuComponent } from './Layout/Components/header/elements/main-menu/main-menu';
 import { CustomFilterPipe } from './custompipes/searchfilter.pipe';
 import { ServicesPage } from './DemoPages/Dashboards/Services/services.component';
+import { ManagePlansComponent } from './DemoPages/Dashboards/ManagePlans/manageplan.component';
 
 const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
   suppressScrollX: true
