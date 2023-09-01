@@ -3,14 +3,20 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { BackendData } from './DemoPages/Dashboards/ManagePlans/manageplan.component';
-@Injectable({
-  providedIn: 'root'
-})
+import { ConfigService } from './config.services';
+@Injectable()
 export class SharedserviceService {
+  
+  public snippet;
 
-  constructor(private http: HttpClient) { }
+  constructor(private config: ConfigService) { }
 
-  getData(): Observable<BackendData> {
-    return this.http.get<BackendData>('/api/data');
+  ngOnInit() {
+    this.config.getData()
+      .subscribe(data => {
+        console.log(data);
+        this.snippet = data;
+      });
   }
+
 }
