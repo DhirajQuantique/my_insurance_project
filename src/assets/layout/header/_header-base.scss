@@ -53,6 +53,10 @@
             background: none !important;
             text-decoration: underline !important;
           }
+          @media only screen and (min-width: 320px) and (max-width: 900px)  {
+            flex-flow: column !important;
+            width: 100%;
+          }
         }
         .submenu {
           transition: 300ms ease-in-out;
@@ -68,6 +72,9 @@
               color: #1e2125;
               background-color: #d1f3ff;
               background-image: var(--bs-gradient);
+              @media only screen and (min-width: 320px) and (max-width: 900px)  {
+                flex-flow: column !important;
+              }
             }
             a{
               padding: 0;

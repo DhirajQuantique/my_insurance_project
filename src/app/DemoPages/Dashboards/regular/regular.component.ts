@@ -2,255 +2,9 @@ import {Component, OnInit, Output, Type} from '@angular/core';
 import { NgbDropdown} from '@ng-bootstrap/ng-bootstrap';
 import { ChartOptions, ChartType, ChartDataSets } from 'chart.js';
 import { Label, SingleDataSet } from 'ng2-charts';
-interface Country {
-  [key: string]: any
-}
+import { ConfigService } from 'src/app/config.services';
 
-const COUNTRIES: Country[] = [
-  {
-    TITLE:'FTD',
-    POLICY:'POLICY',
-    AMOUNT:'AMOUNT',
-    name: 'Russia',
-    flag: 'f/f3/Flag_of_Russia.svg',
-    area: 17075200,
-    population: 146989754
-  },
-  {
-    TITLE:'WTD',
-    POLICY:'POLICY',
-    AMOUNT:'AMOUNT',
-    name: 'Russian',
-    flag: 'f/f3/Flag_of_Russia.svg',
-    area: 17075200,
-    population: 146989754
-  },
-  {
-    TITLE:'MTD',
-    POLICY:'POLICY',
-    AMOUNT:'AMOUNT',
-    name: 'Russiana',
-    flag: 'f/f3/Flag_of_Russia.svg',
-    area: 17075200,
-    population: 146989754
-  },
-  {
-    TITLE:'TTD',
-    POLICY:'POLICY',
-    AMOUNT:'AMOUNT',
-    name: 'Russiaanas',
-    flag: 'f/f3/Flag_of_Russia.svg',
-    area: 17075200,
-    population: 146989754
-  },
-  {
-    TITLE:'TTD',
-    POLICY:'POLICY',
-    AMOUNT:'AMOUNT',
-    name: 'Russiay',
-    flag: 'f/f3/Flag_of_Russia.svg',
-    area: 17075200,
-    population: 146989754
-  },
-  {
-    TITLE:'TTD',
-    POLICY:'POLICY',
-    AMOUNT:'AMOUNT',
-    name: 'Russiaiss',
-    flag: 'f/f3/Flag_of_Russia.svg',
-    area: 17075200,
-    population: 146989754
-  },
-  {
-    TITLE:'TTD',
-    POLICY:'POLICY',
-    AMOUNT:'AMOUNT',
-    name: 'Russiaads',
-    flag: 'f/f3/Flag_of_Russia.svg',
-    area: 17075200,
-    population: 146989754
-  },
-  {
-    TITLE:'TTD',
-    POLICY:'POLICY',
-    AMOUNT:'AMOUNT',
-    name: 'Russiasfdg',
-    flag: 'f/f3/Flag_of_Russia.svg',
-    area: 17075200,
-    population: 146989754
-  },
-  {
-    TITLE:'TTD',
-    POLICY:'POLICY',
-    AMOUNT:'AMOUNT',
-    name: 'Russiasfdg',
-    flag: 'f/f3/Flag_of_Russia.svg',
-    area: 17075200,
-    population: 146989754
-  },
-  {
-    TITLE:'TTD',
-    POLICY:'POLICY',
-    AMOUNT:'AMOUNT',
-    name: 'Russiasfdg',
-    flag: 'f/f3/Flag_of_Russia.svg',
-    area: 17075200,
-    population: 146989754
-  },
-  {
-    TITLE:'TTD',
-    POLICY:'POLICY',
-    AMOUNT:'AMOUNT',
-    name: 'Russiasfdg',
-    flag: 'f/f3/Flag_of_Russia.svg',
-    area: 17075200,
-    population: 146989754
-  },
-  {
-    TITLE:'TTD',
-    POLICY:'POLICY',
-    AMOUNT:'AMOUNT',
-    name: 'Russiasfdg',
-    flag: 'f/f3/Flag_of_Russia.svg',
-    area: 17075200,
-    population: 146989754
-  },
-  {
-    TITLE:'TTD',
-    POLICY:'POLICY',
-    AMOUNT:'AMOUNT',
-    name: 'Russiasfdg',
-    flag: 'f/f3/Flag_of_Russia.svg',
-    area: 17075200,
-    population: 146989754
-  },
-  {
-    TITLE:'TTD',
-    POLICY:'POLICY',
-    AMOUNT:'AMOUNT',
-    name: 'Russiasfdg',
-    flag: 'f/f3/Flag_of_Russia.svg',
-    area: 17075200,
-    population: 146989754
-  },
-  {
-    TITLE:'TTD',
-    POLICY:'POLICY',
-    AMOUNT:'AMOUNT',
-    name: 'Russiasfdg',
-    flag: 'f/f3/Flag_of_Russia.svg',
-    area: 17075200,
-    population: 146989754
-  },
-  {
-    TITLE:'TTD',
-    POLICY:'POLICY',
-    AMOUNT:'AMOUNT',
-    name: 'Russiasfdg',
-    flag: 'f/f3/Flag_of_Russia.svg',
-    area: 17075200,
-    population: 146989754
-  },
-  {
-    TITLE:'TTD',
-    POLICY:'POLICY',
-    AMOUNT:'AMOUNT',
-    name: 'Russiasfdg',
-    flag: 'f/f3/Flag_of_Russia.svg',
-    area: 17075200,
-    population: 146989754
-  },
-  {
-    TITLE:'TTD',
-    POLICY:'POLICY',
-    AMOUNT:'AMOUNT',
-    name: 'Russiasfdg',
-    flag: 'f/f3/Flag_of_Russia.svg',
-    area: 17075200,
-    population: 146989754
-  },
-  {
-    TITLE:'TTD',
-    POLICY:'POLICY',
-    AMOUNT:'AMOUNT',
-    name: 'Russiasfdg',
-    flag: 'f/f3/Flag_of_Russia.svg',
-    area: 17075200,
-    population: 146989754
-  },
-  {
-    TITLE:'TTD',
-    POLICY:'POLICY',
-    AMOUNT:'AMOUNT',
-    name: 'Russiasfdg',
-    flag: 'f/f3/Flag_of_Russia.svg',
-    area: 17075200,
-    population: 146989754
-  },
-  {
-    TITLE:'TTD',
-    POLICY:'POLICY',
-    AMOUNT:'AMOUNT',
-    name: 'Russiasfdg',
-    flag: 'f/f3/Flag_of_Russia.svg',
-    area: 17075200,
-    population: 146989754
-  },
-  {
-    TITLE:'TTD',
-    POLICY:'POLICY',
-    AMOUNT:'AMOUNT',
-    name: 'Russiasfdg',
-    flag: 'f/f3/Flag_of_Russia.svg',
-    area: 17075200,
-    population: 146989754
-  },
-  {
-    TITLE:'TTD',
-    POLICY:'POLICY',
-    AMOUNT:'AMOUNT',
-    name: 'Russiasfdg',
-    flag: 'f/f3/Flag_of_Russia.svg',
-    area: 17075200,
-    population: 146989754
-  },
-  {
-    TITLE:'TTD',
-    POLICY:'POLICY',
-    AMOUNT:'AMOUNT',
-    name: 'Russiasfdg',
-    flag: 'f/f3/Flag_of_Russia.svg',
-    area: 17075200,
-    population: 146989754
-  },
-  {
-    TITLE:'TTD',
-    POLICY:'POLICY',
-    AMOUNT:'AMOUNT',
-    name: 'Russiasfdg',
-    flag: 'f/f3/Flag_of_Russia.svg',
-    area: 17075200,
-    population: 146989754
-  },
-  {
-    TITLE:'TTD',
-    POLICY:'POLICY',
-    AMOUNT:'AMOUNT',
-    name: 'Russiasfdg',
-    flag: 'f/f3/Flag_of_Russia.svg',
-    area: 17075200,
-    population: 146989754
-  },
-  {
-    TITLE:'TTD',
-    POLICY:'POLICY',
-    AMOUNT:'AMOUNT',
-    name: 'Russiasfdg',
-    flag: 'f/f3/Flag_of_Russia.svg',
-    area: 17075200,
-    population: 146989754
-  }
-];
+
 
 @Component({
   selector: 'app-regular',
@@ -263,12 +17,13 @@ export class RegularComponent implements OnInit {
   heading = 'Regular Tables';
   subheading = 'Tables are the backbone of almost all web applications.';
   icon = 'pe-7s-drawer icon-gradient bg-happy-itmeo';
-  page = 1;
-  pageSize = 4;
-  collectionSize = COUNTRIES.length;
-  countries: Country[];
+  public page = 1;
+  public pageSize = 10
+  myresult:any;
   dataList: Array<any> = [];
-  constructor() {
+  benifit: any;
+
+  constructor(private config: ConfigService) {
     this.dataList = [
       { code: 5, pagination: "1" },
       { code: 10, pagination: "2" },
@@ -300,12 +55,16 @@ export class RegularComponent implements OnInit {
    public polarAreaChartType: ChartType = 'polarArea';
  
   ngOnInit() {
-    this.refreshPagination();
+    this.config.getData().subscribe((result: any) => {
+        this.myresult = result.PersonalInfolistModel;
+        this.benifit = result.benifittotal;
+        console.log(this.myresult, this.benifit)
+      });
   }
   getHeaders() {
     let headers: string[] = [];
-    if(this.countries) {
-      this.countries.forEach((value) => {
+    if(this.myresult) {
+      this.myresult.forEach((value) => {
         Object.keys(value).forEach((key) => {
           if(!headers.find((header) => header == key)){
             headers.push(key)
@@ -315,11 +74,7 @@ export class RegularComponent implements OnInit {
     }
     return headers;
   }
-  refreshPagination() {
-    this.countries = COUNTRIES
-      .map((country, i) => ({id: i + 1, ...country}))
-      .slice((this.page - 1) * this.pageSize, (this.page - 1) * this.pageSize + this.pageSize);
-  }
+
 
   
   public chartClicked({event, active}: { event: MouseEvent, active: {}[] }): void {

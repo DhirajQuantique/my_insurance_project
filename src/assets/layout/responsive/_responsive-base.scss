@@ -78,16 +78,21 @@
         width: 100%;
         app-manimenu{
           padding: 20px 0px;
+          width: 100%;
         }
       }
 
       .app-header-right {
         padding-right: 0;
+        flex-flow: column;
+        app-user-box{
+          width: 100%;
+        }
       }
 
       .header-btn-lg {
-        margin-left: .5rem;
-        padding: 0 .5rem;
+        margin-left: 0;
+        padding: 0;
 
         .hamburger-box {
           margin-top: 5px;
@@ -129,12 +134,12 @@
 
   .popover,
   .dropdown-menu {
-    position: fixed !important;
+    position: relative !important;
     z-index: 50;
-    left: 5% !important;
-    top: 50% !important;
-    width: 90% !important;
-    transform: translateY(-50%) !important;
+    left: 0% !important;
+    top: 0% !important;
+    width: 100% !important;
+    transform: translateY(0%) !important;
     min-width: 10px !important;
 
     .btn-icon-vertical .btn-icon-wrapper {

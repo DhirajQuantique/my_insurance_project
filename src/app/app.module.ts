@@ -46,7 +46,6 @@ import {FooterComponent} from './Layout/Components/footer/footer.component';
 // Dashboards
 
 import {AnalyticsComponent} from './DemoPages/Dashboards/analytics/analytics.component';
-import { CreateNewPlanComponent } from './DemoPages/Dashboards/CreateNewPlan/create-new-plan.component';
 import { Aboutus } from './DemoPages/Dashboards/Aboutus/aboutus.component';
 
 import {ForgotPasswordBoxedComponent} from './DemoPages/UserPages/forgot-password-boxed/forgot-password-boxed.component';
@@ -104,6 +103,10 @@ import { MainMenuComponent } from './Layout/Components/header/elements/main-menu
 import { CustomFilterPipe } from './custompipes/searchfilter.pipe';
 import { ServicesPage } from './DemoPages/Dashboards/Services/services.component';
 import { ManagePlansComponent } from './DemoPages/Dashboards/ManagePlans/manageplan.component';
+import { CreateNewPlanComponent } from './DemoPages/Dashboards/CreateNewPlan/create-new-plan.component';
+import { ConfigService } from './config.services';
+import { SettingsService } from '../app/settings.services';
+import { NewAdminPortalComponent } from './new-admin-portal/new-admin-portal.component';
 
 const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
   suppressScrollX: true
@@ -142,6 +145,7 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
     AnalyticsComponent,
     Aboutus,
     ServicesPage,
+    ManagePlansComponent,
     ForgotPasswordBoxedComponent,
     LoginBoxedComponent,
     RegisterBoxedComponent,
@@ -195,6 +199,8 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
     DynamicChartComponent,
     BubbleChartComponent,
     ScatterChartComponent,
+    /*-----------------------------SuperAdmin-------------------------------------------------*/
+    NewAdminPortalComponent,
   ],
   imports: [
     BrowserModule,
@@ -217,6 +223,8 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
     // Charts
 
     ChartsModule,
+    //mat
+  
   ],
   providers: [
     {
@@ -226,8 +234,11 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
       useValue:
       DEFAULT_PERFECT_SCROLLBAR_CONFIG,
       // DEFAULT_DROPZONE_CONFIG,
+      
     },
     ConfigActions,
+    ConfigService,
+    SettingsService,
   ],
   bootstrap: [AppComponent]
 })

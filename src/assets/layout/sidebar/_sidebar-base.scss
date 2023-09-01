@@ -1,5 +1,5 @@
 // Sidebar Base
-
+@import '../../../assets/components/bootstrap5/variables';
 // Variables
 $primaryColor: #4285f4 !default;
 $baseBg: #2a2a2e !default;
@@ -30,7 +30,7 @@ $mobileIconColor: #fff !default;
 
 $dropDownColor: #fff !default;
 $dropDownBg: $lightenBg !default;
-$sidebar-box-shadow: 7px 0 60px rgba(0, 0, 0, 0.05);
+$sidebar-box-shadow: 7px 0 60px $default-theme-background;
 
 .app-sidebar {
   display: flex;

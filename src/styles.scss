@@ -1,7 +1,9 @@
 @import "assets/base";
 @import '../src/assets/components/bootstrap5/variables';
 @import "~bootstrap-icons/font/bootstrap-icons.css";
-
+*{
+    font-family: Roboto !important;
+}
 .header_custom {
     display: flex;
     flex-flow: column;
@@ -19,6 +21,35 @@
     display: flex;
     .notification-dropdown{
         display: flex;
+        .bi{
+            font-size: 24px;
+        }
+    }
+    @media only screen and (min-width: 320px) and (max-width: 900px)  {
+        width: 100%;
+    }
+}
+ngx-loading-bar{
+    .ngx-spinner {
+        position: fixed;
+        top: 0 !important;
+        left: 0 !important;
+        width: 100% !important;
+        height: 100% !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        background: $default-theme-loader;
+        .ngx-spinner-icon {
+            width: 50px;
+            height: 50px;
+            border: 2px solid #ccc;
+            border-top-color: inherit;
+            border-left-color: inherit;
+            border-radius: 50%;
+            -webkit-animation: .4s linear infinite loading-bar-spinner;
+            animation: .4s linear infinite loading-bar-spinner;
+        }
     }
 }
 app-base-layout{
@@ -62,7 +93,7 @@ app-base-layout{
 
     .benifit-total-title {
         width: 100%;
-        background: rgba(204, 204, 204, 1);
+        background: $default-theme-header;
         padding: ($spacer * 1) ($spacer * 1);
         border-top-left-radius: 8px;
         border-top-right-radius: 8px;
@@ -91,7 +122,7 @@ app-base-layout{
     .benifit-total-body {
         width: 100%;
         padding: ($spacer * 1);
-        background: rgba(0, 0, 0, 0.05);
+        background: $default-theme-background;
         margin-top: 4px;
 
         .benifit-total-body-section {
@@ -280,7 +311,7 @@ app-base-layout{
                 }
 
                 .pagination-step-show-from {
-                    background: rgba(0, 0, 0, 0.05);
+                    background: $default-theme-background;
                     border-radius: 5px;
                     display: flex;
                     align-items: center;
@@ -309,12 +340,13 @@ app-base-layout{
 
         .dashboard-main-table {
             border-radius: 8px;
-            overflow: auto;
-            background-color: rgba(0, 0, 0, 0.05) !important;
+            overflow-y: auto;
+            max-height: 240px;
+            background-color: $default-theme-background !important;
 
             table.table.table-striped {
                 th {
-                    background-color: rgba(0, 0, 0, 0.2);
+                    background-color: $default-theme-header;
                     border-bottom-width: 0px !important;
                     border-right: 2px solid #fff;
 
@@ -340,11 +372,21 @@ app-base-layout{
                 }
 
                 margin-bottom: 0rem !important;
+                max-height: 400px !important;
+                overflow-y: scroll !important;
             }
         }
     }
 }
-
+app-create-new-plan{
+    .create-plan-wrapper {
+        @media only screen and (min-width: 320px) and (max-width: 900px)  {
+            margin-top: 1rem;
+            padding: 0px 0px !important;
+            height: auto;
+        }
+    }
+}
 .table-header-section {
     .pagination-step-show-from {
         display: flex;
