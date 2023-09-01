@@ -14,6 +14,9 @@
 
     .create_new_plan_section_one {
         margin-top: ($spacer * 3);
+        border-radius: 12px;
+        background: $default-theme-background;
+        padding: ($spacer * 1);
     }
 
     .create_new_plan_section_two {
@@ -84,7 +87,10 @@
 }
 
 .content-sub-title-wrapper {
+    padding: 1px 20px;
     margin-top: 12px;
+    background: white;
+    border-radius: 8px;
 
     .content-sub-title {
         margin-top: 20px;
@@ -153,7 +159,6 @@
     .content-co-insurer-wrapper {
         width: 100%;
         margin-top: 20px;
-        height: 170px;
 
         .content-co-insurer-content {
             margin-top: 20px;
@@ -218,7 +223,7 @@
 
         .content-co-insurer-company {
             margin-top: 16px 0px 20px 0px;
-            height: 36px;
+            height: auto;
             width: 100%;
         }
 
@@ -324,7 +329,7 @@
         margin-top: 16px;
         border-radius: 8px;
         // background: #FFF;
-        box-shadow: 0px 0px 1px 0px rgba(0, 0, 0, 0.25), 0px 2px 1px 0px rgba(0, 0, 0, 0.05);
+        box-shadow: 0px 0px 1px 0px rgba(0, 0, 0, 0.25), 0px 2px 1px 0px $default-theme-background;
         flex-wrap: wrap;
         display: flex;
         gap: 20px;
@@ -337,7 +342,7 @@
             background: #F7F7F7;
             height: 351px;
             margin: 16px 0px;
-            box-shadow: 0px 0px 1px 0px rgba(0, 0, 0, 0.25), 0px 2px 1px 0px rgba(0, 0, 0, 0.05);
+            box-shadow: 0px 0px 1px 0px rgba(0, 0, 0, 0.25), 0px 2px 1px 0px $default-theme-background;
 
             .card-title {
                 display: flex;

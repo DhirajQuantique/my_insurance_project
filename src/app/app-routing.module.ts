@@ -63,7 +63,7 @@ const routes: Routes = [
 
       // Dashboads
 
-      {path: '', component: AnalyticsComponent, data: {extraParameter: 'dashboardsMenu'}},
+      {path: '', component: AnalyticsComponent},//, data: {extraParameter: 'dashboardsMenu'
       {path: 'manageplan',component:ManagePlansComponent},
       {path: 'aboutus',component:Aboutus},
       {path: 'services',component:ServicesPage},

@@ -27,7 +27,7 @@
             class="form-select"
             style="width: auto"
             [(ngModel)]="pageSize"
-            (ngModelChange)="refreshPagination()"
+           
           >
             <option
               *ngFor="let item of this.dataList; let i = index"
@@ -114,45 +114,45 @@
           </tr>
         </thead>
         <tbody>
-          <tr *ngFor="let country of countries; index as i">
-            <td scope="row">{{ country.name }}</td>
+          <tr *ngFor="let item of myresult | slice: (page-1) * pageSize : (page-1) * pageSize + pageSize">
+            <td scope="row">{{ item.name }}</td>
             <td>
               <div class="header_custome">
                 <span class="header_custom_title">{{
-                  country.area | number
+                  item.area | number
                 }}</span>
                 <span class="header_custom_titles">{{
-                  country.population | number
+                  item.population | number
                 }}</span>
               </div>
             </td>
             <td>
               <div class="header_custome">
                 <span class="header_custom_title">{{
-                  country.area | number
+                  item.area | number
                 }}</span>
                 <span class="header_custom_titles">{{
-                  country.population | number
+                  item.population | number
                 }}</span>
               </div>
             </td>
             <td>
               <div class="header_custome">
                 <span class="header_custom_title">{{
-                  country.area | number
+                  item.area | number
                 }}</span>
                 <span class="header_custom_titles">{{
-                  country.population | number
+                  item.population | number
                 }}</span>
               </div>
             </td>
             <td>
               <div class="header_custome">
                 <span class="header_custom_title">{{
-                  country.area | number
+                  item.area | number
                 }}</span>
                 <span class="header_custom_titles">{{
-                  country.population | number
+                  item.population | number
                 }}</span>
               </div>
             </td>
@@ -190,28 +190,28 @@
         </div>
       </div>
     </div>
-    <div class="benifit-total-body">
+    <div class="benifit-total-body" *ngFor="let item of benifit">
       <div class="benifit-total-body-section">
         <div class="benifit-total-row">
           <span>Last 7 days</span>
-          <span class="">12 Admin</span>
+          <span class="">{{item.lastsevday}}</span>
         </div>
         <div class="benifit-total-row">
           <span>Last Month</span>
-          <span class="">36 Admin</span>
+          <span class="">{{item.lastmonth}}</span>
         </div>
         <div class="benifit-total-row">
           <span>Annual</span>
-          <span class="">339 Admin</span>
+          <span class="">{{item.annual}}</span>
         </div>
         <div class="benifit-total-row">
           <span>Over 5 Years</span>
-          <span class="">5,489 Admins</span>
+          <span class="">{{item.overfivear}}</span>
         </div>
       </div>
       <div class="total-estimate">
         <span>Earned Estimate </span>
-        <span class=""><span class="rupees-icon"></span>200,24,535.00</span>
+        <span class=""><span class="rupees-icon"></span>{{item.earnedtotal}}</span>
       </div>
     </div>
   </div>
@@ -296,28 +296,28 @@
             </div>
           </div>
         </div>
-        <div class="benifit-total-body">
+        <div class="benifit-total-body" *ngFor="let item of benifit">
           <div class="benifit-total-body-section">
             <div class="benifit-total-row">
               <span>Last 7 days</span>
-              <span class="">12 Admin</span>
+              <span class="">{{item.lastsevday}}</span>
             </div>
             <div class="benifit-total-row">
               <span>Last Month</span>
-              <span class="">36 Admin</span>
+              <span class="">{{item.lastmonth}}</span>
             </div>
             <div class="benifit-total-row">
               <span>Annual</span>
-              <span class="">339 Admin</span>
+              <span class="">{{item.annual}}</span>
             </div>
             <div class="benifit-total-row">
               <span>Over 5 Years</span>
-              <span class="">5,489 Admins</span>
+              <span class="">{{item.overfivear}}</span>
             </div>
           </div>
           <div class="total-estimate">
             <span>Earned Estimate </span>
-            <span class=""><span class="rupees-icon"></span>200,24,535.00</span>
+            <span class=""><span class="rupees-icon"></span>{{item.earnedtotal}}</span>
           </div>
         </div>
       </div>
