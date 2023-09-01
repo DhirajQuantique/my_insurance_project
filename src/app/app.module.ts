@@ -107,7 +107,7 @@ import { ManagePlansComponent } from './DemoPages/Dashboards/ManagePlans/managep
 
 //SuperAdmin//
 import { NewAdminPortalComponent } from './new-admin-portal/new-admin-portal.component';
-
+// import { MatStepperModule } from '@angular/material/stepper';
 
 
 
@@ -227,6 +227,8 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
     // Charts
 
     ChartsModule,
+    //mat
+  
   ],
   providers: [
     {
