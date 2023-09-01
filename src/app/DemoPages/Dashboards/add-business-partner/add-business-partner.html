@@ -1,0 +1,77 @@
+<!-- HTML structure for the multi-step form -->
+<div class="col-md-12">
+  <div class="addBusinessPartner">
+    <div class="business-partner-title d-flex">
+      <div class="business-partner-title-section d-flex">
+        <span class="add-user-partner mr-10"></span>
+        <h3>Add Business Partner</h3>
+      </div>
+      <div class="business-partner-body-section d-flex">
+
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container">
+    <div id="stepper1" class="bs-stepper">
+        <div class="bs-stepper-header">
+          <div class="step" data-target="#test-l-1">
+            <button class="step-trigger">
+              <span class="bs-stepper-circle"><i class="bi bi-check2"></i></span>
+              <span class="bs-stepper-label"> Link Business Partner</span>
+            </button>
+          </div>
+          <div class="line"></div>
+          <div class="step" data-target="#test-l-2">
+            <button class="step-trigger">
+              <span class="bs-stepper-circle"><i class="bi bi-check2"></i></span>
+              <span class="bs-stepper-label"> Set Master Details</span>
+            </button>
+          </div>
+          <div class="line"></div>
+          <div class="step" data-target="#test-l-3">
+            <button class="step-trigger">
+              <span class="bs-stepper-circle"><i class="bi bi-check2"></i></span>
+              <span class="bs-stepper-label">Configure Products</span>
+            </button>
+          </div>
+          <div class="line"></div>
+          <div class="step" data-target="#test-l-4">
+            <button class="step-trigger">
+              <span class="bs-stepper-circle"><i class="bi bi-check2"></i></span>
+              <span class="bs-stepper-label"> Get Portal Built</span>
+            </button>
+          </div>
+          
+        </div>
+        <div class="bs-stepper-content">
+          <form (ngSubmit)="onSubmit()">
+            <div id="test-l-1" class="content">
+              <div class="form-group">
+                <label for="exampleInputEmail1">Email address</label>
+                <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email" />
+              </div>
+              <button (click)="next()" class="btn btn-primary">Next</button>
+            </div>
+            <div id="test-l-2" class="content">
+              <div class="form-group">
+                <label for="exampleInputPassword1">Password</label>
+                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" />
+              </div>
+              <button (click)="next()" class="btn btn-primary">Next</button>
+            </div>
+            <div id="test-l-3" class="content">
+                <div class="form-group">
+                  <label for="exampleInputPassword1">PPP</label>
+                  <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" />
+                </div>
+                <button (click)="next()" class="btn btn-primary">Next</button>
+              </div>
+            <div id="test-l-4" class="content text-center">
+              <button type="submit" class="btn btn-primary mt-5">Submit</button>
+            </div>
+          </form>
+        </div>
+      </div>
+  </div>
+  

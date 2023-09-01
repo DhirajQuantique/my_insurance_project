@@ -55,7 +55,8 @@ import { ServicesPage } from './DemoPages/Dashboards/Services/services.component
 import { ManagePlansComponent } from './DemoPages/Dashboards/ManagePlans/manageplan.component';
 /*------------------------------------SuperAdmin-----------------------------------------------*/
 import { CreateNewPlanComponent } from './DemoPages/Dashboards/CreateNewPlan/create-new-plan.component';
-import { NewAdminPortalComponent } from './new-admin-portal/new-admin-portal.component';
+import { NewAdminPortalComponent } from './DemoPages/Dashboards/new-admin-portal/new-admin-portal.component';
+import { AddBusinessPartner } from './DemoPages/Dashboards/add-business-partner/add-business-partner';
 const routes: Routes = [
   {
     path: '',
@@ -64,12 +65,14 @@ const routes: Routes = [
 
       // Dashboads
 
-      {path: '', component: AnalyticsComponent},//, data: {extraParameter: 'dashboardsMenu'
+      {path: '', component: AnalyticsComponent,data: {extraParameter: 'dashboardsMenu'}},//, 
       {path: 'manageplan',component:ManagePlansComponent},
       {path: 'aboutus',component:Aboutus},
       {path: 'services',component:ServicesPage},
       { path: 'createplan', component: CreateNewPlanComponent },
       { path: 'manageplan', component: ManagePlansComponent },
+      {path:'newadminportal', component:NewAdminPortalComponent},
+      {path: 'addBusinessPartner', component:AddBusinessPartner},
       // Elements
 
       {path: 'elements/buttons-standard', component: StandardComponent, data: {extraParameter: 'elementsMenu'}},

@@ -1,0 +1,27 @@
+@import '~bs-stepper\dist\css\bs-stepper.min.css';
+@import '../../../../assets/components/bootstrap5/variables';
+.bs-stepper-header{
+    display: flex;
+    align-items: center;
+    flex-flow: column !important;
+}
+#stepper1{
+    display: flex;
+}
+.addBusinessPartner{
+    background-color: $default-theme-background;
+    border-radius: ($spacer * 0.4);
+    padding: ($spacer * 1.2);
+    .business-partner-title{
+        .business-partner-title-section{
+            .add-user-partner{
+                width: 24px;
+                height: 24px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background-image: $add-user-businesspartner;
+            }
+        }
+    }
+}
