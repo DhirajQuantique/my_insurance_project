@@ -53,8 +53,9 @@ import {ChartjsComponent} from './DemoPages/Charts/chartjs/chartjs.component';
 import { Aboutus } from './DemoPages/Dashboards/Aboutus/aboutus.component';
 import { ServicesPage } from './DemoPages/Dashboards/Services/services.component';
 import { ManagePlansComponent } from './DemoPages/Dashboards/ManagePlans/manageplan.component';
+/*------------------------------------SuperAdmin-----------------------------------------------*/
 import { CreateNewPlanComponent } from './DemoPages/Dashboards/CreateNewPlan/create-new-plan.component';
-
+import { NewAdminPortalComponent } from './new-admin-portal/new-admin-portal.component';
 const routes: Routes = [
   {
     path: '',
@@ -104,6 +105,10 @@ const routes: Routes = [
       // Charts
 
       {path: 'charts/chartjs', component: ChartjsComponent, data: {extraParameter: ''}},
+
+
+      /* SuperAdmin */
+      {path:'new-admin-portal',component:NewAdminPortalComponent, data:{}}
 
     ]
 

@@ -105,6 +105,13 @@ import { CustomFilterPipe } from './custompipes/searchfilter.pipe';
 import { ServicesPage } from './DemoPages/Dashboards/Services/services.component';
 import { ManagePlansComponent } from './DemoPages/Dashboards/ManagePlans/manageplan.component';
 
+//SuperAdmin//
+import { NewAdminPortalComponent } from './new-admin-portal/new-admin-portal.component';
+
+
+
+
+
 const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
   suppressScrollX: true
 };
@@ -196,6 +203,8 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
     DynamicChartComponent,
     BubbleChartComponent,
     ScatterChartComponent,
+    /*-----------------------------SuperAdmin-------------------------------------------------*/
+    NewAdminPortalComponent,
   ],
   imports: [
     BrowserModule,
