@@ -1,4 +1,4 @@
-# ArchitectUI - Angular 11 Bootstrap 5
+![Main_DashBoard](https://github.com/DhirajQuantique/my_insurance_project/assets/141119453/8169c973-239f-4a48-8fa6-c649ed1be6de)# ArchitectUI - Angular 11 Bootstrap 5
 
 This admin dashboard was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.2.
 
@@ -8,7 +8,8 @@ Pro version for ArchitectUI based on Angular 11 is available [here](https://dash
 
 ## ArchitectUI Preview
 
-![ArchitectUI Angular 11 admin dashboard template](https://colorlib.com/wp/wp-content/uploads/sites/2/architectui-angular-free.jpg)
+![ArchitectUI Angular 11 admin dashboard template](![Main_DashBoard](https://github.com/DhirajQuantique/my_insurance_project/assets/141119453/9794a5f2-9bc6-4447-8adf-97f6eedcf801)
+)
 
 ## Development server
 
