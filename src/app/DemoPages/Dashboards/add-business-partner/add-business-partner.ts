@@ -8,10 +8,7 @@ import Stepper from 'bs-stepper';
 export class AddBusinessPartner implements OnInit {
   private stepper: Stepper;
   ngOnInit(): void {
-    this.stepper = new Stepper(document.querySelector('#stepper1'), {
-      linear: false,
-      animation: true
-    })
+
   }
   active: number = 1; // Initialize the active step to 1
   next() {
