@@ -1,0 +1,9 @@
+@import '~bs-stepper\dist\css\bs-stepper.min.css';
+.bs-stepper-header{
+    display: flex;
+    align-items: center;
+    flex-flow: column !important;
+}
+#stepper1{
+    display: flex;
+}

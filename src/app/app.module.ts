@@ -106,6 +106,8 @@ import { ManagePlansComponent } from './DemoPages/Dashboards/ManagePlans/managep
 import { CreateNewPlanComponent } from './DemoPages/Dashboards/CreateNewPlan/create-new-plan.component';
 import { ConfigService } from './config.services';
 import { SettingsService } from '../app/settings.services';
+import { NewAdminPortalComponent } from './new-admin-portal/new-admin-portal.component';
+
 const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
   suppressScrollX: true
 };
@@ -143,6 +145,7 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
     AnalyticsComponent,
     Aboutus,
     ServicesPage,
+    ManagePlansComponent,
     ForgotPasswordBoxedComponent,
     LoginBoxedComponent,
     RegisterBoxedComponent,
@@ -196,6 +199,8 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
     DynamicChartComponent,
     BubbleChartComponent,
     ScatterChartComponent,
+    /*-----------------------------SuperAdmin-------------------------------------------------*/
+    NewAdminPortalComponent,
   ],
   imports: [
     BrowserModule,
@@ -218,6 +223,8 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
     // Charts
 
     ChartsModule,
+    //mat
+  
   ],
   providers: [
     {
