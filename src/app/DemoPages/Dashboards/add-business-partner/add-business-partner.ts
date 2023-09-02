@@ -1,18 +1,34 @@
-import { Component, OnInit } from '@angular/core';
-import Stepper from 'bs-stepper';
+import { Component, OnInit } from "@angular/core";
+import Stepper from "bs-stepper";
 @Component({
-  selector: 'app-new-admin-portal',
-  templateUrl: './add-business-partner.html',
-  styleUrls: ['./add-business-partner.scss']
+  selector: "app-new-admin-portal",
+  templateUrl: "./add-business-partner.html",
+  styleUrls: ["./add-business-partner.scss"],
 })
 export class AddBusinessPartner implements OnInit {
   private stepper: Stepper;
+  addbuspart: boolean = true;
+  addbusparttwo: boolean = false;
+  addbuspartnext() {
+    this.addbuspart = false;
+    this.addbusparttwo = true;
+  }
+  addbuspartpre() {
+    this.addbuspart = true;
+    this.addbusparttwo = false;
+  }
   ngOnInit(): void {
-
+    this.stepper = new Stepper(document.querySelector("#stepper1"), {
+      linear: false,
+      animation: true,
+    });
   }
   active: number = 1; // Initialize the active step to 1
   next() {
     this.stepper.next();
+  }
+  back() {
+    this.stepper.previous();
   }
 
   onSubmit() {
@@ -28,11 +44,6 @@ export class AddBusinessPartner implements OnInit {
     // You can perform actions when the user submits the form
   }
 }
-
-
-
-
-
 
 //    active: boolean;
 //   active = 1;
@@ -52,7 +63,6 @@ export class AddBusinessPartner implements OnInit {
 
 //   constructor() {}
 
-  
 // }
 //   stepCompletionStatus:true;
 //   constructor() { }
