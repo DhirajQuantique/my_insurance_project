@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ConfigService } from 'src/app/config.services';
 import { SharedserviceService } from 'src/app/sharedservice.service';
 
 export interface BackendData {
@@ -29,7 +30,7 @@ export class ManagePlansComponent implements OnInit {
   inactiveCount: number = 15; // Set actual count for inactive plans
   rows: BackendData[] = []; // Use BackendData type here
   filteredData: ProductData[] = []; // Add this property
-  constructor(private sharedservice: SharedserviceService) {}
+  constructor(private config: ConfigService) {}
   Tdata: ProductData[] = [
     { productId: 112001, product: 'Travel', subProduct: 'Domestic', planCreatedAt: new Date() },
     { productId: 112002, product: 'Travel', subProduct: 'International', planCreatedAt: new Date() },
@@ -49,7 +50,7 @@ export class ManagePlansComponent implements OnInit {
 
   // Data
   loadData() {
-    this.sharedservice.getData().subscribe(
+    this.config.getData().subscribe(
       (data: BackendData) => {
         this.rows = [{ ...data }]; 
       },

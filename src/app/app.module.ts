@@ -106,7 +106,8 @@ import { ManagePlansComponent } from './DemoPages/Dashboards/ManagePlans/managep
 import { CreateNewPlanComponent } from './DemoPages/Dashboards/CreateNewPlan/create-new-plan.component';
 import { ConfigService } from './config.services';
 import { SettingsService } from '../app/settings.services';
-import { NewAdminPortalComponent } from './new-admin-portal/new-admin-portal.component';
+import { NewAdminPortalComponent } from './DemoPages/Dashboards/new-admin-portal/new-admin-portal.component';
+import { AddBusinessPartner } from './DemoPages/Dashboards/add-business-partner/add-business-partner';
 
 const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
   suppressScrollX: true
@@ -144,6 +145,7 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
 
     AnalyticsComponent,
     Aboutus,
+    AddBusinessPartner,
     ServicesPage,
     ManagePlansComponent,
     ForgotPasswordBoxedComponent,

@@ -1,0 +1,114 @@
+<!-- HTML structure for the multi-step form -->
+<div class="col-md-9 addBusiness-Partner" [ngClass]="addbuspart ? 'addbusshow' : 'addbushide'">
+  <div class="addBusinessPartner mt-15 mb-15">
+    <div class="business-partner-title pb-10 d-flex justify-content-space-between">
+      <div class="business-partner-title-section d-flex">
+        <span class="add-user-partner mr-10"></span>
+        <h3>Add Business Partner</h3>
+      </div>
+      <div class="business-partner-body-section d-flex gap-20">
+        <button type="button" class="addbusiness-back-btn btn" (click)="addbuspartpre()">Back</button>
+        <button type="button" class="addbusiness-next-btn btn" (click)="addbuspartnext()">Next</button>
+      </div>
+    </div>
+    <div class="business-partner-content bg-white mt-15 pt-20 pr-20 pb-20 pl-20 d-flex">
+      <div class="business-partner-body">
+        <h5>Select the category that best describes your business partner.</h5>
+        <div class="form-group">
+          <div class="radioGroup">
+            <input type="radio" value="insurancecomp" class="mr-10" id="insurancecomp"><label for="insurancecomp">Insurance Company</label>
+          </div>
+          <div class="radioGroup">
+            <input type="radio" class="mr-10" value="brokdist" id="brokdist"><label for="insurancecomp">Broker/Distributer</label>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- HTML structure for the multi-step form -->
+<div class="container" [ngClass]="addbusparttwo ? 'addbusshow' : 'addbushide'">
+  <div id="stepper1" class="bs-stepper">
+        <div class="bs-stepper-header">
+          <div class="step" data-target="#test-l-1">
+            <button class="step-trigger">
+              <span class="bs-stepper-circle"><i class="bi bi-check2"></i></span>
+              <span class="bs-stepper-label"> Link Business Partner</span>
+            </button>
+          </div>
+          <div class="line"></div>
+          <div class="step" data-target="#test-l-2">
+            <button class="step-trigger">
+              <span class="bs-stepper-circle"><i class="bi bi-check2"></i></span>
+              <span class="bs-stepper-label"> Set Master Details</span>
+            </button>
+          </div>
+          <div class="line"></div>
+          <div class="step" data-target="#test-l-3">
+            <button class="step-trigger">
+              <span class="bs-stepper-circle"><i class="bi bi-check2"></i></span>
+              <span class="bs-stepper-label">Configure Products</span>
+            </button>
+          </div>
+          <div class="line"></div>
+          <div class="step" data-target="#test-l-4">
+            <button class="step-trigger">
+              <span class="bs-stepper-circle"><i class="bi bi-check2"></i></span>
+              <span class="bs-stepper-label"> Get Portal Built</span>
+            </button>
+          </div>
+          
+        </div>
+        <div class="bs-stepper-content w-100">
+          <form class="w-100 bs-stepper-content-section" (ngSubmit)="onSubmit()">
+            <div id="test-l-1" class="content">
+              <div class="col-md-12 addBusiness-Partner">
+                <div class="addBusinessPartner">
+                  <div class="business-partner-title pb-10 d-flex justify-content-space-between">
+                    <div class="business-partner-title-section d-flex">
+                      <span class="add-user-partner mr-10"></span>
+                      <h3>Add Business Partner</h3>
+                    </div>
+                    <div class="business-partner-body-section d-flex gap-20">
+                      <button type="button" class="addbusiness-back-btn btn" (click)="back()">Back</button>
+                      <button type="button" class="addbusiness-next-btn btn" (click)="next()">Next</button>
+                    </div>
+                  </div>
+                  <div class="business-partner-content pt-20 pr-20 pb-20 pl-20 d-flex">
+                    <div class="business-partner-body">
+                      <h5>Business Partner Details</h5>
+                      <div class="form-group bus-part-form-group">
+                        <div class="form-control bg-0">
+                          <input class="bus-part-input bg-0 border-0 w-100" placeholder="Business Name" value="" />
+                          <span class="input-field-placeholder">Business Name</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div id="test-l-2" class="content">
+              <div class="form-group">
+                <label for="exampleInputPassword1">Password</label>
+                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" />
+              </div>
+              <button (click)="next()" class="btn btn-primary">Next</button>
+            </div>
+            <div id="test-l-3" class="content">
+                <div class="form-group">
+                  <label for="exampleInputPassword1">PPP</label>
+                  <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" />
+                </div>
+                <button (click)="next()" class="btn btn-primary">Next</button>
+              </div>
+            <div id="test-l-4" class="content text-center">
+              <button type="submit" class="btn btn-primary mt-5">Submit</button>
+            </div>
+          </form>
+        </div>
+    </div>
+</div>
+
+  
