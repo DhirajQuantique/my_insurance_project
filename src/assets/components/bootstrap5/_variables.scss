@@ -1521,6 +1521,7 @@ $add-user-businesspartner:url("data:image/svg+xml,%3Csvg width='25' height='25' 
 $default-theme-button:rgba(0, 0, 0, 0.6);
 $default-stepper-circle:rgb(234 234 234);
 $default-stepper-background:#F6F6F6;
+$default-input-plcholder-bg:rgb(242 242 242);
 @mixin rupees-icon() {
   background-image: $rupee-symbol-svg;
   background-repeat: no-repeat;

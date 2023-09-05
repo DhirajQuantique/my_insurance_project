@@ -45,6 +45,12 @@
         }
         .bs-stepper-content{
             display: flex;
+            .bs-stepper-content-section{
+                display: flex;
+                .content{
+                    width: 100%;
+                }
+            }
         }
     }
 }
@@ -53,6 +59,27 @@
 }
 .addbushide{
     display: none !important;
+}
+.bus-part-form-group{
+    .form-control{
+        padding: ($spacer * 0) ($spacer * 0);
+        position: relative;
+        border-radius: ($spacer * 0.4);
+        input{
+            display: flex;
+            padding: ($spacer * 0.6) ($spacer * 0.6);
+        }
+        .input-field-placeholder{
+            position: absolute;
+            display: flex;
+            top: -9px;
+            font-size: ($spacer * 0.7);
+            left: 12px;
+            z-index: 10000;
+            padding: 0 ($spacer * 0.1);
+            background-color: $default-input-plcholder-bg;
+        }
+    }
 }
 .addBusiness-Partner{
     margin: 0px auto;
@@ -95,7 +122,6 @@
                     }
                 }
             }
-            background-color: $white;
             border-radius: ($spacer * 0.4);
         }
     }

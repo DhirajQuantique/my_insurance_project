@@ -11,7 +11,7 @@
         <button type="button" class="addbusiness-next-btn btn" (click)="addbuspartnext()">Next</button>
       </div>
     </div>
-    <div class="business-partner-content mt-15 pt-20 pr-20 pb-20 pl-20 d-flex">
+    <div class="business-partner-content bg-white mt-15 pt-20 pr-20 pb-20 pl-20 d-flex">
       <div class="business-partner-body">
         <h5>Select the category that best describes your business partner.</h5>
         <div class="form-group">
@@ -61,10 +61,10 @@
           
         </div>
         <div class="bs-stepper-content w-100">
-          <form class="w-100" (ngSubmit)="onSubmit()">
+          <form class="w-100 bs-stepper-content-section" (ngSubmit)="onSubmit()">
             <div id="test-l-1" class="content">
               <div class="col-md-12 addBusiness-Partner">
-                <div class="addBusinessPartner mt-15 mb-15">
+                <div class="addBusinessPartner">
                   <div class="business-partner-title pb-10 d-flex justify-content-space-between">
                     <div class="business-partner-title-section d-flex">
                       <span class="add-user-partner mr-10"></span>
@@ -75,15 +75,13 @@
                       <button type="button" class="addbusiness-next-btn btn" (click)="next()">Next</button>
                     </div>
                   </div>
-                  <div class="business-partner-content mt-15 pt-20 pr-20 pb-20 pl-20 d-flex">
+                  <div class="business-partner-content pt-20 pr-20 pb-20 pl-20 d-flex">
                     <div class="business-partner-body">
-                      <h5>Select the category that best describes your business partner.</h5>
-                      <div class="form-group">
-                        <div class="radioGroup">
-                          <input type="radio" value="insurancecomp" class="mr-10" id="insurancecomp"><label for="insurancecomp">Insurance Company</label>
-                        </div>
-                        <div class="radioGroup">
-                          <input type="radio" class="mr-10" value="brokdist" id="brokdist"><label for="insurancecomp">Broker/Distributer</label>
+                      <h5>Business Partner Details</h5>
+                      <div class="form-group bus-part-form-group">
+                        <div class="form-control bg-0">
+                          <input class="bus-part-input bg-0 border-0 w-100" placeholder="Business Name" value="" />
+                          <span class="input-field-placeholder">Business Name</span>
                         </div>
                       </div>
                     </div>
