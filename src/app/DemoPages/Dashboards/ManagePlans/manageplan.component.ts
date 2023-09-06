@@ -85,7 +85,7 @@ export class ManagePlansComponent implements OnInit {
   }
 
   getRowIconClass(index: number): string {
-    return this.isRowExpanded(index) ? 'fa fa-chevron-down' : 'fa fa-chevron-right';
+    return this.isRowExpanded(index) ? 'bi bi-chevron-right' : 'bi bi-chevron-right';
 
   }
   
