@@ -8,6 +8,7 @@
       </div>
       <div class="business-partner-body-section d-flex gap-20">
         <button type="button" class="addbusiness-back-btn btn" (click)="addbuspartpre()">Back</button>
+        <!-- <button type="button" class="addbusiness-next-btn btn" (click)="onSubmit()">Next</button> -->
         <button type="button" class="addbusiness-next-btn btn" (click)="addbuspartnext()">Next</button>
       </div>
     </div>
@@ -16,10 +17,12 @@
         <h5>Select the category that best describes your business partner.</h5>
         <div class="form-group">
           <div class="radioGroup">
-            <input type="radio" value="insurancecomp" class="mr-10" id="insurancecomp"><label for="insurancecomp">Insurance Company</label>
+            <input type="radio" value="insurancecomp" class="mr-10" id="insurancecomp"><label
+              for="insurancecomp">Insurance Company</label>
           </div>
           <div class="radioGroup">
-            <input type="radio" class="mr-10" value="brokdist" id="brokdist"><label for="insurancecomp">Broker/Distributer</label>
+            <input type="radio" class="mr-10" value="brokdist" id="brokdist"><label
+              for="insurancecomp">Broker/Distributer</label>
           </div>
         </div>
       </div>
@@ -30,58 +33,311 @@
 <!-- HTML structure for the multi-step form -->
 <div class="container" [ngClass]="addbusparttwo ? 'addbusshow' : 'addbushide'">
   <div id="stepper1" class="bs-stepper">
-        <div class="bs-stepper-header">
-          <div class="step" data-target="#test-l-1">
-            <button class="step-trigger">
-              <span class="bs-stepper-circle"><i class="bi bi-check2"></i></span>
-              <span class="bs-stepper-label"> Link Business Partner</span>
-            </button>
-          </div>
-          <div class="line"></div>
-          <div class="step" data-target="#test-l-2">
-            <button class="step-trigger">
-              <span class="bs-stepper-circle"><i class="bi bi-check2"></i></span>
-              <span class="bs-stepper-label"> Set Master Details</span>
-            </button>
-          </div>
-          <div class="line"></div>
-          <div class="step" data-target="#test-l-3">
-            <button class="step-trigger">
-              <span class="bs-stepper-circle"><i class="bi bi-check2"></i></span>
-              <span class="bs-stepper-label">Configure Products</span>
-            </button>
-          </div>
-          <div class="line"></div>
-          <div class="step" data-target="#test-l-4">
-            <button class="step-trigger">
-              <span class="bs-stepper-circle"><i class="bi bi-check2"></i></span>
-              <span class="bs-stepper-label"> Get Portal Built</span>
-            </button>
-          </div>
-          
-        </div>
-        <div class="bs-stepper-content w-100">
-          <form class="w-100 bs-stepper-content-section" (ngSubmit)="onSubmit()">
-            <div id="test-l-1" class="content">
-              <div class="col-md-12 addBusiness-Partner">
-                <div class="addBusinessPartner">
-                  <div class="business-partner-title pb-10 d-flex justify-content-space-between">
-                    <div class="business-partner-title-section d-flex">
-                      <span class="add-user-partner mr-10"></span>
-                      <h3>Add Business Partner</h3>
-                    </div>
-                    <div class="business-partner-body-section d-flex gap-20">
-                      <button type="button" class="addbusiness-back-btn btn" (click)="back()">Back</button>
-                      <button type="button" class="addbusiness-next-btn btn" (click)="next()">Next</button>
-                    </div>
-                  </div>
-                  <div class="business-partner-content pt-20 pr-20 pb-20 pl-20 d-flex">
-                    <div class="business-partner-body">
-                      <h5>Business Partner Details</h5>
+    <div class="bs-stepper-header">
+      <div class="step" data-target="#test-l-1">
+        <button class="step-trigger">
+          <span class="bs-stepper-circle"><i class="bi bi-check2"></i></span>
+          <span class="bs-stepper-label"> Link Business Partner</span>
+        </button>
+      </div>
+      <div class="line"></div>
+      <div class="step" data-target="#test-l-2">
+        <button class="step-trigger">
+          <span class="bs-stepper-circle"><i class="bi bi-check2"></i></span>
+          <span class="bs-stepper-label"> Set Master Details</span>
+        </button>
+      </div>
+      <div class="line"></div>
+      <div class="step" data-target="#test-l-3">
+        <button class="step-trigger">
+          <span class="bs-stepper-circle"><i class="bi bi-check2"></i></span>
+          <span class="bs-stepper-label">Configure Products</span>
+        </button>
+      </div>
+      <div class="line"></div>
+      <div class="step" data-target="#test-l-4">
+        <button class="step-trigger">
+          <span class="bs-stepper-circle"><i class="bi bi-check2"></i></span>
+          <span class="bs-stepper-label"> Get Portal Built</span>
+        </button>
+      </div>
+
+    </div>
+    <div class="bs-stepper-content w-100">
+      <form class="w-100 bs-stepper-content-section" [formGroup]="addbusinessPartner" (submit)="onSubmit()">
+        <div id="test-l-1" class="content">
+          <div class="col-md-12 addBusiness-Partner">
+            <div class="addBusinessPartner">
+              <div class="business-partner-title pb-10 d-flex justify-content-space-between">
+                <div class="business-partner-title-section d-flex">
+                  <span class="add-user-partner mr-10"></span>
+                  <h3>Add Business Partner</h3>
+                </div>
+                <div class="business-partner-body-section d-flex gap-20">
+                  <button type="button" class="addbusiness-back-btn btn" (click)="back()">Back</button>
+                  <button type="button" class="addbusiness-next-btn btn" (click)="next()">Next</button>
+
+                </div>
+              </div>
+              <div class="business-partner-content pt-20 pr-20 pb-20 pl-20 d-flex">
+                <div class="business-partner-body">
+                  <h5>Business Partner Details</h5>
+                  <div class="row">
+                    <div class="col-md-6 mb-15">
                       <div class="form-group bus-part-form-group">
                         <div class="form-control bg-0">
-                          <input class="bus-part-input bg-0 border-0 w-100" placeholder="Business Name" value="" />
+                          <input formControlName="BusinessName" class="bus-part-input bg-0 border-0 w-100"
+                            placeholder="Business Name" value="" />
                           <span class="input-field-placeholder">Business Name</span>
+                        </div>
+
+                      </div>
+                    </div>
+
+                    <div class="col-md-6 mb-15">
+                      <div class="form-group bus-part-form-group">
+                        <div class="form-control bg-0">
+                          <select class="bus-part-input bg-0 border-0 w-100" style="height: 40px;">
+                            <option value="">Select Business Partner Type</option>
+                            <option value="type1">Type 1</option>
+                            <option value="type2">Type 2</option>
+                            <option value="type3">Type 3</option>
+
+                          </select>
+                          <span class="input-field-placeholder">Business Partner Type</span>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-md-6 mb-15">
+                      <div class="form-group bus-part-form-group">
+                        <div class="form-control bg-0">
+                          <input formControlName="Email" class="bus-part-input bg-0 border-0 w-100"
+                            placeholder="name@gmail.com" value="" />
+                          <span class="input-field-placeholder">Email id</span>
+                        </div>
+
+                      </div>
+                    </div>
+
+                    <div class="col-md-6 mb-15">
+                      <div class="form-group bus-part-form-group">
+                        <div class="form-control bg-0">
+                          <input formControlName="ContactNumber" class="bus-part-input bg-0 border-0 w-100"
+                            placeholder="+91 | 9887766520" value="" />
+                          <span class="input-field-placeholder">Contact Number</span>
+                        </div>
+
+                      </div>
+                    </div>
+
+                    <div class="col-md-6 mb-15">
+                      <div class="form-group bus-part-form-group">
+                        <div class="form-control bg-0">
+                          <input formControlName="TANNumber" class="bus-part-input bg-0 border-0 w-100"
+                            placeholder="ABCD24769E" value="" />
+                          <span class="input-field-placeholder">TAN Number</span>
+                        </div>
+
+                      </div>
+                    </div>
+
+                    <div class="col-md-6 mb-15">
+                      <div class="form-group bus-part-form-group">
+                        <div class="form-control bg-0">
+                          <input formControlName="Address" class="bus-part-input bg-0 border-0 w-100"
+                            placeholder="Type address here.." value="" />
+                          <span class="input-field-placeholder">Address</span>
+                        </div>
+
+                      </div>
+                    </div>
+
+                    <div class="col-md-6 mb-15">
+                      <div class="form-group bus-part-form-group">
+                        <div class="form-control bg-0 header_custom_title d-flex">
+                          <input type="file" class="form-control" id="inputGroupFile04"
+                            aria-describedby="inputGroupFileAddon04" aria-label="Upload">
+                          <input type="text" formControlName="PANNumber" class="form-control"
+                            placeholder="Type PAN number and upload document" aria-describedby="inputGroupFileAddon04"
+                            aria-label="Upload">
+                          <label class="btn btn-outline-secondary" for="inputGroupFile04" type="button"
+                            id="inputGroupFileAddon04">Upload</label>
+                          <span class="input-field-placeholder">Pan Card Documents</span>
+                        </div>
+                        <span class="input-field-placeholder">* Max file size 2MB</span>
+                      </div>
+                    </div>
+
+                    <div class="col-md-6 mb-15">
+                      <div class="form-group bus-part-form-group">
+                        <div class="form-control bg-0 header_custom_title d-flex">
+                          <input type="file" class="form-control" id="inputGroupFile04"
+                            aria-describedby="inputGroupFileAddon04" aria-label="Upload">
+                          <input type="text" formControlName="GSTNumber" class="form-control"
+                            placeholder="Type GST number and upload document" aria-describedby="inputGroupFileAddon04"
+                            aria-label="Upload">
+                          <label class="btn btn-outline-secondary" for="inputGroupFile04" type="button"
+                            id="inputGroupFileAddon04">Upload</label>
+                          <span class="input-field-placeholder">GSTIN Documents</span>
+                        </div>
+                        <span class="input-field-placeholder">* Max file size 2MB</span>
+                      </div>
+                    </div>
+
+
+
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- <div id="test-l-2" class="content">
+          <div class="form-group">
+            <label for="exampleInputPassword1">Password</label>
+            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" />
+          </div>
+          <button (click)="next()" class="btn btn-primary">Next</button>
+        </div> -->
+        <div id="test-l-2" class="content">
+          <div class="col-md-12 addBusiness-Partner">
+            <div class="addBusinessPartner">
+              <div class="business-partner-title pb-10 d-flex justify-content-space-between">
+                <div class="business-partner-title-section d-flex">
+                  <span class="add-user-partner mr-10"></span>
+                  <h3>Add Business Partner</h3>
+                </div>
+                <div class="business-partner-body-section d-flex gap-20">
+                  <button type="button" class="addbusiness-back-btn btn" (click)="back()">Back</button>
+                  <button type="button" class="addbusiness-next-btn btn" (click)="next()">Next</button>
+                </div>
+              </div>
+              <div class="business-partner-content pt-20 pr-20 pb-20 pl-20 d-flex">
+                <div class="business-partner-body">
+                  <h5>Contact Person Details</h5>
+                  <div class="row">
+                    <div class="col-md-6 mb-15">
+                      <div class="form-group bus-part-form-group">
+                        <div class="form-control bg-0">
+                          <input class="bus-part-input bg-0 border-0 w-100" placeholder="Mihir Naik" value="" />
+                          <span class="input-field-placeholder">Name</span>
+                        </div>
+
+                      </div>
+                    </div>
+
+                    <div class="col-md-6 mb-15">
+                      <div class="form-group bus-part-form-group">
+                        <div class="form-control bg-0">
+                          <input class="bus-part-input bg-0 border-0 w-100" placeholder="+91 | 9887766520" value="" />
+                          <span class="input-field-placeholder">Contact Number</span>
+                        </div>
+
+                      </div>
+                    </div>
+
+                    <div class="col-md-6 mb-15">
+                      <div class="form-group bus-part-form-group">
+                        <div class="form-control bg-0">
+                          <input class="bus-part-input bg-0 border-0 w-100" placeholder="name@gmail.com" value="" />
+                          <span class="input-field-placeholder">Email id</span>
+                        </div>
+
+                      </div>
+                    </div>
+
+                    <div class="col-md-6 mb-15">
+                      <div class="form-group bus-part-form-group">
+                        <div class="form-control bg-0 header_custom_title d-flex">
+                          <input type="file" class="form-control" id="inputGroupFile04"
+                            aria-describedby="inputGroupFileAddon04" aria-label="Upload">
+                          <input type="text" class="form-control" placeholder="Identity Document"
+                            aria-describedby="inputGroupFileAddon04" aria-label="Upload">
+                          <label class="btn btn-outline-secondary" for="inputGroupFile04" type="button"
+                            id="inputGroupFileAddon04">Upload</label>
+                          <span class="input-field-placeholder">Identity Document</span>
+                        </div>
+                        <span class="input-field-placeholder">* Max file size 2MB</span>
+                      </div>
+                    </div>
+
+                    <div class="col-md-6 mb-15">
+                      <div class="form-group bus-part-form-group">
+                        <div class="form-control bg-0">
+                          <select class="bus-part-input bg-0 border-0 w-100" style="height: 40px;">
+                            <option *ngFor="let Position of Positions" value="Position">{{Position}}</option>
+
+
+                          </select>
+                          <span class="input-field-placeholder">Hierarchy Level (Position)</span>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-md-6 mb-15">
+                      <div class="form-group bus-part-form-group">
+                        <div class="form-control bg-0">
+                          <select class="bus-part-input bg-0 border-0 w-100" style="height: 40px;">
+
+                            <option *ngFor="let Status of BStatus" value="Status">{{Status}}</option>
+
+
+                          </select>
+                          <span class="input-field-placeholder">Business Status</span>
+                        </div>
+                      </div>
+                    </div>
+
+
+
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="test-l-3" class="content">
+          <div class="col-md-12 addBusiness-Partner">
+            <div class="addBusinessPartner">
+              <div class="business-partner-title pb-10 d-flex justify-content-space-between">
+                <div class="business-partner-title-section d-flex">
+                  <span class="add-user-partner mr-10"></span>
+                  <h3>Add Business Partner</h3>
+                </div>
+                <div class="business-partner-body-section d-flex gap-20">
+                  <button type="button" class="addbusiness-back-btn btn" (click)="back()">Back</button>
+                  <button type="button" class="addbusiness-next-btn btn" (click)="next()">Next</button>
+                </div>
+              </div>
+              <div class="business-partner-content pt-20 pr-20 pb-20 pl-20 d-flex">
+                <div class="business-partner-body">
+                  <h5>Add Currency & Region</h5>
+                  <div class="row">
+
+                    <div class="col-md-12 mb-15">
+                      <div class="form-group bus-part-form-group currency-selection">
+                        <p>Select Currency(s)</p>
+                        <span>Multi-select currencies from the given drop down.</span>
+                        <div class="form-control bg-0" style="width: 75%;">
+                          <select class="bus-part-input bg-0 border-0 w-100" style="height: 40px;">
+                            <option *ngFor="let currencies of currency" value="currencies">{{currencies}}</option>
+
+                          </select>
+
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-md-12 mb-15">
+                      <div class="form-group bus-part-form-group region-selection">
+                        <p>Select Region</p>
+                        <span>Multi-select region from auto-search as per the requirement.</span>
+                        <div class="form-control bg-0" style="width: 75%;">
+                          <select class="bus-part-input bg-0 border-0 w-100" style="height: 40px;">
+                            <option *ngFor="let Region of Regions" value="Region">{{Region}}</option>
+                          </select>
+
                         </div>
                       </div>
                     </div>
@@ -89,26 +345,68 @@
                 </div>
               </div>
             </div>
-            <div id="test-l-2" class="content">
-              <div class="form-group">
-                <label for="exampleInputPassword1">Password</label>
-                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" />
-              </div>
-              <button (click)="next()" class="btn btn-primary">Next</button>
-            </div>
-            <div id="test-l-3" class="content">
-                <div class="form-group">
-                  <label for="exampleInputPassword1">PPP</label>
-                  <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" />
-                </div>
-                <button (click)="next()" class="btn btn-primary">Next</button>
-              </div>
-            <div id="test-l-4" class="content text-center">
-              <button type="submit" class="btn btn-primary mt-5">Submit</button>
-            </div>
-          </form>
+          </div>
         </div>
-    </div>
-</div>
+        <div id="test-l-4" class="content">
+          <div class="col-md-12 addBusiness-Partner">
+            <div class="addBusinessPartner">
+              <div class="business-partner-title pb-10 d-flex justify-content-space-between">
+                <div class="business-partner-title-section d-flex">
+                  <span class="add-user-partner mr-10"></span>
+                  <h3>Add Business Partner</h3>
+                </div>
+                <div class="business-partner-body-section d-flex gap-20">
+                  <button type="button" class="addbusiness-back-btn btn" (click)="back()">Back</button>
+                  <button type="button" class="addbusiness-next-btn btn" (click)="next()">Add</button>
+                </div>
+              </div>
+              <div class="business-partner-content pt-20 pr-20 pb-20 pl-20 d-flex">
+                <div class="business-partner-body">
+                  <h5>Set Hierarchy & User Access</h5>
+                  <div class="row">
 
-  
+                    <div class="col-md-12 mb-15">
+                      <div class="form-group bus-part-form-group ">
+                        <div class="form-check form-switch">
+                          <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked"
+                            checked>
+                          <label class="form-check-label" for="flexSwitchCheckChecked">
+                            <p>Hierarchy Management</p>
+                            <span>By allowing Admin to set hierarchy, you will provide him access to manage level with
+                              respect to zone, region and state.</span>
+                          </label>
+                        </div>
+                        <div class="form-check form-switch">
+                          <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked"
+                            checked>
+                          <label class="form-check-label" for="flexSwitchCheckChecked">
+                            <p>Set User</p>
+                            <span>By allowing Admin to set User, you will provide him access to manage ‘type’,
+                              ‘role’,‘user’, ‘hierarchy level’, and ‘pos
+                              mapping’.</span>
+                          </label>
+                        </div>
+                        <div class="form-check form-switch">
+                          <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked"
+                            checked>
+                          <label class="form-check-label" for="flexSwitchCheckChecked">
+                            <p>Allow API Integrations</p>
+                            <span>By allowing Admin for API Integration, you will provide him access for usability of
+                              API Integration.</span>
+                          </label>
+                        </div>
+
+
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

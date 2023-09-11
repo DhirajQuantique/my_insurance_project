@@ -1,75 +1,93 @@
 @import '~bs-stepper\dist\css\bs-stepper.min.css';
 @import '../../../../assets/components/bootstrap5/variables';
-.bs-stepper-header{
+
+.bs-stepper-header {
     display: flex;
     align-items: center;
     flex-flow: column !important;
 }
 
-#stepper1{
+#stepper1 {
     display: flex;
-    &.bs-stepper{
-        .bs-stepper-header{
-                .step {
-                    .step-trigger{
-                        padding: 0px 0px;
-                        width: 216px !important;
-                        align-items: center;
-                        justify-content: flex-start;
-                        .bs-stepper-circle{
-                            background-color: $default-stepper-circle !important;
-                        }
+
+    &.bs-stepper {
+        .bs-stepper-header {
+            .step {
+                .step-trigger {
+                    padding: 0px 0px;
+                    width: 216px !important;
+                    align-items: center;
+                    justify-content: flex-start;
+
+                    .bs-stepper-circle {
+                        background-color: $default-stepper-circle !important;
                     }
-                    &.active{
-                        .bs-stepper-circle{
-                            background-color: $default-stepper-circle !important;
-                            .bi{
-                                color: $gray-700;
-                            }
+                }
+
+                &.active {
+                    .bs-stepper-circle {
+                        background-color: $default-stepper-circle !important;
+
+                        .bi {
+                            color: $gray-700;
                         }
                     }
                 }
-                .line{
-                    margin: 0px auto 0px 20px;
-                    background-color: transparent;
-                    display: flex;
-                    width: 1px !important;
-                    height: 20px !important;
-                    flex: none !important;
-                    border: 1px dashed $default-stepper-circle;
-                }
+            }
+
+            .line {
+                margin: 0px auto 0px 20px;
+                background-color: transparent;
+                display: flex;
+                width: 1px !important;
+                height: 20px !important;
+                flex: none !important;
+                border: 1px dashed $default-stepper-circle;
+            }
+
             background-color: $default-stepper-background;
             border-radius: ($spacer * 0.4);
             height: 100%;
             padding: ($spacer * 1.2);
         }
-        .bs-stepper-content{
+
+        .bs-stepper-content {
             display: flex;
-            .bs-stepper-content-section{
+
+            .bs-stepper-content-section {
                 display: flex;
-                .content{
+
+                .content {
                     width: 100%;
                 }
             }
         }
     }
 }
-.addbusshow{
+
+.addbusshow {
     display: block;
 }
-.addbushide{
+
+.addbushide {
     display: none !important;
 }
-.bus-part-form-group{
-    .form-control{
+
+.bus-part-form-group {
+
+
+    .form-control {
         padding: ($spacer * 0) ($spacer * 0);
         position: relative;
         border-radius: ($spacer * 0.4);
-        input{
+
+        input {
             display: flex;
             padding: ($spacer * 0.6) ($spacer * 0.6);
+            background-color: rgba(0, 0, 0, 0.0);
         }
-        .input-field-placeholder{
+
+        .input-field-placeholder {
             position: absolute;
             display: flex;
             top: -9px;
@@ -81,16 +99,32 @@
         }
     }
 }
-.addBusiness-Partner{
+
+::-webkit-file-upload-button {
+    display: none;
+}
+
+::file-selector-button {
+    display: none;
+}
+
+input[type="file"] {
+    display: none !important;
+}
+
+.addBusiness-Partner {
     margin: 0px auto;
-    .addBusinessPartner{
+
+    .addBusinessPartner {
         background-color: $default-theme-background;
         border-radius: ($spacer * 0.4);
         padding: ($spacer * 1.2);
-        .business-partner-title{
+
+        .business-partner-title {
             border-bottom: 1px solid $gray-500;
-            .business-partner-title-section{
-                .add-user-partner{
+
+            .business-partner-title-section {
+                .add-user-partner {
                     width: 24px;
                     height: 24px;
                     display: flex;
@@ -99,13 +133,15 @@
                     background-image: $add-user-businesspartner;
                 }
             }
-            .business-partner-body-section{
-                .addbusiness-back-btn{
+
+            .business-partner-body-section {
+                .addbusiness-back-btn {
                     border: 1px solid $default-theme-button;
                     border-radius: ($spacer * 0.4);
                     width: ($spacer * 4.7);
                 }
-                .addbusiness-next-btn{
+
+                .addbusiness-next-btn {
                     background-color: $default-theme-button;
                     border-radius: ($spacer * 0.4);
                     color: $white;
@@ -113,16 +149,54 @@
                 }
             }
         }
-        .business-partner-content{
-            .business-partner-body{
-                .radioGroup{
+
+        .business-partner-content {
+            .business-partner-body {
+                width: 100%;
+
+                .radioGroup {
                     display: flex;
-                    input[type="radio"]{
+
+                    input[type="radio"] {
                         display: flex;
                     }
                 }
             }
+
             border-radius: ($spacer * 0.4);
         }
+    }
+}
+
+.currency-selection,
+.region-selection {
+    display: flex;
+    padding: 20px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    align-self: stretch;
+    border-radius: 8px;
+    background: var(--surface-default, #FFF);
+
+    p {
+        color: #202223;
+        font-feature-settings: 'clig' off, 'liga' off;
+        font-family: Roboto;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 20px;
+        /* 142.857% */
+    }
+
+    span {
+        color: #6D7175;
+        font-family: Roboto;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 20px;
+        /* 142.857% */
     }
 }
